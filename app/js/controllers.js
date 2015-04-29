@@ -1,3 +1,3 @@
 app.controller('DisplayController', ['$scope', function($scope) {
-  $scope.greeting = 'Czech';
+  $scope.greeting = 'SoundBoard';
 }]);
