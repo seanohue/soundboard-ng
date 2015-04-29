@@ -1,7 +1,12 @@
- var app = angular.module('app', [
- 	'plangular',
- 	'scKey'
- 	])
-      .config(function(plangularConfigProvider){
-        plangularConfigProvider.clientId = 'clientId';
-      });
+(function(){	 
+
+	 var app = angular.module('app', [
+	 	'plangular',
+	 	'scKey',
+	 	'scControllers'
+	 	])
+	      .config(function(plangularConfigProvider){
+	        plangularConfigProvider.clientId = 'clientId';
+	      });
+
+})()
