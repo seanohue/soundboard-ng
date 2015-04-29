@@ -1,6 +1,7 @@
  var app = angular.module('app', [
  	'plangular',
- 	'scKey'
+ 	'scKey',
+ 	'DisplayController'
  	])
       .config(function(plangularConfigProvider){
         plangularConfigProvider.clientId = 'clientId';
