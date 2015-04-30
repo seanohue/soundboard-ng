@@ -3,10 +3,10 @@
 	 var app = angular.module('app', [
 	 	'plangular',
 	 	'scKey',
+	 	'clientID',
 	 	'scControllers'
 	 	])
-	      .config(function(plangularConfigProvider){
-	        plangularConfigProvider.clientId = 'clientId';
-	      });
-
+	    .config(['clientID', function(plangularConfigProvider, clientID){
+	        plangularConfigProvider.clientId = clientID;
+	    }]);
 })()
