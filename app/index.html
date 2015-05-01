@@ -14,11 +14,27 @@
   <![endif]-->
 </head>
 
-<body ng-app="app"> 
-  <div ng-controller = "DisplayController as display">
+<body ng-app="app" id="main"> 
+  <div ng-controller = "DisplayController as display" id="branding">
 	 <h1>{{display.greeting}}</h1>
   </div>
-  <div plangular="http://soundcloud.com/jxnblk/tracks">
+
+  <div id="tabs">
+    <ul>
+      <li>
+        Now Playing        
+      </li>
+      <li>
+        Search        
+      </li>
+      <li>
+        Log In       
+      </li>
+    </ul>
+  </div>
+
+
+  <div plangular="http://soundcloud.com/jxnblk/tracks" id="trackinfo">
   	<h3>{{track.user.username}} - {{track.title}}</h3>
   	<div id="trackimg">
   		<img ng-src="{{ track.artwork_url  }}" alt="{{ track.title }}" />

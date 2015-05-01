@@ -1,0 +1,51 @@
+#main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 796px;
+  height: 376px;
+  background-color: #FF6600;
+  color: #EEE;
+  font-family: sans-serif;
+  padding: 0px;
+  border: 2px solid #FF6600;
+}
+
+#trackinfo {
+  margin-left: 50px;
+}
+
+header {
+  text-align: center;
+  border-bottom: 2px solid #CCC;
+  padding-top: 10px;
+  background-color: #00A6DC;
+}
+
+h1 {
+  margin: 0 auto;
+  margin-left: 300px;
+  margin-bottom: 5px;
+  font-size: 60px;
+  display: inline-block;
+}
+
+.close {
+  float: right;
+  margin-right: 30px;
+  margin-top: 30px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.city {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.twitter-headline {
+  text-align: center;
+  margin-top: 75px;
+  font-size: 60px;
+}
