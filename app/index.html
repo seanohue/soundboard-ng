@@ -41,11 +41,10 @@
     
   </div>
   
-  <div plangular="http://soundcloud.com/jxnblk/tracks" id="trackinfo">
+  <div plangular="https://soundcloud.com/platform/upfront-022-neil-landstrumm" id="trackinfo">
   	<h3>{{track.user.username}} - {{track.title}}</h3>
   	<div id="trackimg">
   		<img ng-src="{{ track.artwork_url  }}" alt="{{ track.title }}" />
-		<img ng-src="{{ track.waveform_url }}" alt="waveform" />
 	</div>
 	<button ng-click="playPause()">Play/Pause</button>
   	<progress ng-value="currentTime / duration || 0">

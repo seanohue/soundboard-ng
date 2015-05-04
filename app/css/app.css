@@ -22,7 +22,7 @@
 }
 
 header {
-  text-align: right;
+  text-align: center;
   border-bottom: 2px solid #CCC;
   padding-top: 10px;
   background-color: #666;
@@ -30,7 +30,7 @@ header {
 
 header h1 {
   margin: 0 auto;
-  margin-right: 25px;
+  margin-left: 50px;
   margin-bottom: 5px;
   font-size: 48px;
   display: inline-block;
