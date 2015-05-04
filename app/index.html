@@ -45,7 +45,7 @@
   <div plangular="https://soundcloud.com/platform/upfront-022-neil-landstrumm" id="trackinfo">
   	<h3>{{track.user.username}} - {{track.title}}</h3>
 	<img src="img/play-icon.png" alt="" ng-click="play(); display.togglePlay()" ng-hide="display.nowPlaying()"> 
-  <img src="img/pause-icon.png" ng-click="pause(); display.togglePlay()" ng-hide="!display.nowPlaying()">
+  <img src="img/pause-icon.png" ng-click="pause(); display.togglePlay()" ng-hide="!display.nowPlayingb()">
   	<progress ng-value="currentTime / duration || 0">
   		{{ currentTime / duration || 0 }}
 	</progress>
@@ -62,6 +62,7 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
   <script src="bower_components/plangular/dist/plangular.min.js"></script>
+  <script src="../bower_components/angular-route/angular-route.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/controllers.js"></script>
 </body>
