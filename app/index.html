@@ -46,7 +46,8 @@
   <div plangular="https://soundcloud.com/platform/upfront-022-neil-landstrumm" id="trackinfo">
   	<h3>{{track.user.username}} - {{track.title}}</h3>
   	
-	<img src="img/play-icon.png" alt="" ng-click="playPause()">
+	<img src="img/play-icon.png" alt="" ng-click="play()">
+  <img src="img/pause-icon.png" ng-click="pause()">
   	<progress ng-value="currentTime / duration || 0">
   		{{ currentTime / duration || 0 }}
 	</progress>
