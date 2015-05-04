@@ -12,7 +12,7 @@
 
 @font-face{
   font-family: "Luckiest Guy";
-  src: url(/font/LuckiestGuy.ttf) format("truetype");
+  src: url(../font/LuckiestGuy.ttf) format("truetype");
 }
 
 #trackinfo {
@@ -20,15 +20,12 @@
 }
 
 #trackimg {
-  margin-left: 50px;
+  margin-left: 100px;
   display: inline;
 }
 
-.gradient {
-  background: -webkit-linear-gradient(#75bd25, #343a44); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#75bd25, #343a44); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#75bd25, #343a44); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#75bd25, #343a44); /* Standard syntax */
+#trackimg img{
+  border: 4px solid black;
 }
 
 header {
