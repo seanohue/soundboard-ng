@@ -6,23 +6,45 @@
 
   <title>SoundBoard</title>
   <meta name="description" content="An in-dash proof of concept for the SoundCloud API">
-  <meta name="author" content="Sean O'Donohue">
-
+  <meta name="author" content="Sean O'Donohue">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/app.css">
+  
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 
-<body ng-app="app"> 
-  <div ng-controller = "DisplayController as display">
-	 <h1>{{display.greeting}}</h1>
+<body ng-app="app" id="main" class="innershadow"> 
+  <div class = "gradient" ng-controller = "DisplayController as display" id="branding">
+	 
+   <header class="innershadow">
+     <h1>{{display.greeting}}</h1>
+     <ul class="nav nav-tabs" id="sb-tabs">
+      <li class="active">
+        <a href="#">
+        Now Playing 
+        </a>       
+      </li>
+      <li>
+        <a href="#">
+        Search  
+        </a>      
+      </li>
+      <li>
+        <a href="#">
+        Log In 
+        </a>    
+      </li>
+    </ul>
+   </header>
+    
   </div>
-  <div plangular="http://soundcloud.com/jxnblk/tracks">
+  
+  <div plangular="https://soundcloud.com/platform/upfront-022-neil-landstrumm" id="trackinfo">
   	<h3>{{track.user.username}} - {{track.title}}</h3>
   	<div id="trackimg">
   		<img ng-src="{{ track.artwork_url  }}" alt="{{ track.title }}" />
-		<img ng-src="{{ track.waveform_url }}" alt="waveform" />
 	</div>
 	<button ng-click="playPause()">Play/Pause</button>
   	<progress ng-value="currentTime / duration || 0">
