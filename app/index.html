@@ -20,6 +20,7 @@
 	 
    <header class="innershadow">
      <h1>{{display.greeting}}</h1>
+     <img src="img/Close-2-icon.png" alt="" id="closebutton">
      <ul class="nav nav-tabs" id="sb-tabs">
       <li class="active">
         <a href="#">
@@ -37,6 +38,7 @@
         </a>    
       </li>
     </ul>
+    
    </header>
     
   </div>
@@ -44,7 +46,7 @@
   <div plangular="https://soundcloud.com/platform/upfront-022-neil-landstrumm" id="trackinfo">
   	<h3>{{track.user.username}} - {{track.title}}</h3>
   	
-	<button ng-click="playPause()">Play/Pause</button>
+	<img src="img/play-icon.png" alt="" ng-click="playPause()">
   	<progress ng-value="currentTime / duration || 0">
   		{{ currentTime / duration || 0 }}
 	</progress>

@@ -28,18 +28,24 @@
   border: 4px solid black;
 }
 
+#closebutton {
+  margin-left: 150px;
+  display: inline;
+}
+
 header {
   font-family: "Luckiest Guy", sans-serif;
   text-align: center;
   border-bottom: 2px solid #CCC;
-  padding-top: 10px;
+  /*padding-top: 10px;*/
   background-color: #666;
 }
 
 header h1 {
   margin: 0 auto;
-  margin-left: 50px;
-  margin-bottom: 5px;
+  margin-left: 220px;
+  /*margin-bottom: 5px;*/
+  padding-top: 10px;
   font-size: 48px;
   display: inline-block;
   color: #FF6600;
