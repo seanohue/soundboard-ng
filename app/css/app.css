@@ -10,28 +10,42 @@
   padding: 0px;
 }
 
+@font-face{
+  font-family: "Luckiest Guy";
+  src: url(../font/LuckiestGuy.ttf) format("truetype");
+}
+
 #trackinfo {
   margin-left: 50px;
 }
 
-.gradient {
-  background: -webkit-linear-gradient(#75bd25, #343a44); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#75bd25, #343a44); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#75bd25, #343a44); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#75bd25, #343a44); /* Standard syntax */
+#trackimg {
+  margin-left: 100px;
+  display: inline;
+}
+
+#trackimg img{
+  border: 4px solid black;
+}
+
+#closebutton {
+  margin-left: 150px;
+  display: inline;
 }
 
 header {
+  font-family: "Luckiest Guy", sans-serif;
   text-align: center;
   border-bottom: 2px solid #CCC;
-  padding-top: 10px;
+  /*padding-top: 10px;*/
   background-color: #666;
 }
 
 header h1 {
   margin: 0 auto;
-  margin-left: 50px;
-  margin-bottom: 5px;
+  margin-left: 220px;
+  /*margin-bottom: 5px;*/
+  padding-top: 10px;
   font-size: 48px;
   display: inline-block;
   color: #FF6600;
