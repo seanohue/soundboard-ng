@@ -10,6 +10,11 @@
   padding: 0px;
 }
 
+@font-face{
+  font-family: "Luckiest Guy";
+  src: url(/font/LuckiestGuy.ttf) format("truetype");
+}
+
 #trackinfo {
   margin-left: 50px;
 }
@@ -22,6 +27,7 @@
 }
 
 header {
+  font-family: "Luckiest Guy", sans-serif;
   text-align: center;
   border-bottom: 2px solid #CCC;
   padding-top: 10px;
