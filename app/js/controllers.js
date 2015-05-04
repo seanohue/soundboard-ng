@@ -14,4 +14,16 @@
 	  }
 	}]);
 
+
+	scControllers.controller('DisplayController', ['$scope', function($scope) {
+		var vm = this;
+		vm.active = 'now';
+		vm.setNav = function(nav){
+			vm.active = nav;
+		}
+		vm.getActive = function(){
+			return vm.active;
+		}
+	}]);
+
 })();
