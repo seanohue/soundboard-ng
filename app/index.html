@@ -16,52 +16,37 @@
 </head>
 
 <body ng-app="app" id="main" class="innershadow"> 
-  <div class = "gradient" ng-controller = "DisplayController as display" id="branding">
+  
 	 
-   <header class="innershadow">
-     <h1>{{display.greeting}}</h1>
+   <header class="innershadow" id="branding" ng-controller="DisplayController as display">
+     <h1>SoundBoard</h1>
      <img src="img/Close-2-icon.png" alt="" id="closebutton">
-     <ul class="nav nav-tabs" id="sb-tabs">
-      <li class="active">
-        <a href="#">
-        Now Playing 
-        </a>       
-      </li>
-      <li>
-        <a href="#">
-        Search  
-        </a>      
-      </li>
-      <li>
-        <a href="#">
-        Log In 
-        </a>    
-      </li>
-    </ul>
-    
+     <nav class="{{display.getActive()}}">
+       <ul class="nav nav-tabs" id="sb-tabs">
+        <li class = "now">
+          <a href="#/" ng-click="display.setNav('now')">
+          Now Playing 
+          </a>       
+        </li>
+        <li class = "search">
+          <a href="#/search" ng-click="display.setNav('search')">
+          Search  
+          </a>      
+        </li>
+        <li class = "login">
+          <a href="#/login" ng-click="display.setNav('login')">
+          Log In 
+          </a>    
+        </li>
+      </ul>
+    </nav>
    </header>
     
-  
-  <div plangular="https://soundcloud.com/platform/upfront-022-neil-landstrumm" id="trackinfo">
-  	<h3>{{track.user.username}} - {{track.title}}</h3>
-	<img src="img/play-icon.png" alt="" ng-click="play(); display.togglePlay()" ng-hide="display.nowPlaying()"> 
-  <img src="img/pause-icon.png" ng-click="pause(); display.togglePlay()" ng-hide="!display.nowPlaying()">
-  	<progress ng-value="currentTime / duration || 0">
-  		{{ currentTime / duration || 0 }}
-	</progress>
-  	<small>{{ currentTime | hhmmss }} | {{ duration | hhmmss }}</small>
-  	<div id="trackimg">
-      <img ng-src="{{ track.artwork_url  }}" alt="{{ track.title }}" />
-    </div>
-    <div id="view-link">
-  		<a ng-href="{{track.permalink_url}}">View on SoundCloud</a>
-  	</div>
-  </div>
-
-  </div>
+  <ng-view></ng-view>
 
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
   <script src="bower_components/plangular/dist/plangular.min.js"></script>
+  <script src="../bower_components/angular-route/angular-route.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/controllers.js"></script>
 </body>
