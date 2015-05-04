@@ -1,10 +1,10 @@
-<div ng-controller = "DisplayController as display" >
+<div ng-controller = "PlayerController as player" >
   <div plangular="https://soundcloud.com/platform/upfront-022-neil-landstrumm" id="trackinfo">
   	<h3>
       {{track.user.username}} - {{track.title}}
     </h3>
-    <img src="img/play-icon.png" alt="" ng-click="play(); display.togglePlay()" ng-hide="display.nowPlaying()"> 
-    <img src="img/pause-icon.png" ng-click="pause(); display.togglePlay()" ng-hide="!display.nowPlaying()">    
+    <img src="img/play-icon.png" alt="" ng-click="play(); player.togglePlay()" ng-hide="display.nowPlaying()"> 
+    <img src="img/pause-icon.png" ng-click="pause(); player.togglePlay()" ng-hide="!player.nowPlaying()">    
     <progress ng-value="currentTime / duration || 0">
     		{{ currentTime / duration || 0 }}
   	</progress>

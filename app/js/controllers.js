@@ -2,7 +2,7 @@
 	var scControllers = angular.module('scControllers', [
 		]);
 
-	scControllers.controller('DisplayController', ['$scope', function($scope) {
+	scControllers.controller('PlayerController', ['$scope', function($scope) {
 	  var vm = this;
 	  vm.playingNow = false;
 	  vm.greeting = 'SoundBoard';
@@ -13,5 +13,5 @@
 	  	return vm.playingNow;
 	  }
 	}]);
-	
+
 })();

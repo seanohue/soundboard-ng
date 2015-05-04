@@ -21,24 +21,25 @@
    <header class="innershadow" id="branding">
      <h1>SoundBoard</h1>
      <img src="img/Close-2-icon.png" alt="" id="closebutton">
-     <ul class="nav nav-tabs" id="sb-tabs">
-      <li>
-        <a href="#/">
-        Now Playing 
-        </a>       
-      </li>
-      <li>
-        <a href="#/search">
-        Search  
-        </a>      
-      </li>
-      <li>
-        <a href="#/login">
-        Log In 
-        </a>    
-      </li>
-    </ul>
-    
+     <nav class="{{active}}">
+       <ul class="nav nav-tabs" id="sb-tabs">
+        <li class = "now">
+          <a href="#/" ng-click="active='now'">
+          Now Playing 
+          </a>       
+        </li>
+        <li class = "search">
+          <a href="#/search" ng-click="active='search'">
+          Search  
+          </a>      
+        </li>
+        <li class = "login">
+          <a href="#/login" ng-click="active='login'">
+          Log In 
+          </a>    
+        </li>
+      </ul>
+    </nav>
    </header>
     
   <ng-view></ng-view>
