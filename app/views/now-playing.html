@@ -7,10 +7,10 @@
       <h3>
         {{track.user.username}} - {{track.title}}
       </h3> 
-      <button ng-click="previous()">P</button>  
+      <img src="img/previous.png" ng-click="previous()">  
       <img src="img/play-icon.png" alt="" ng-click="play($index); ham.togglePlay()" ng-hide="ham.nowPlaying()"> 
       <img src="img/pause-icon.png" ng-click="pause(); ham.togglePlay()" ng-hide="!ham.nowPlaying()">   
-      <button ng-click="next()">N</button>  
+      <img src="img/next.png" ng-click="next()"> 
       <progress ng-value="currentTime / duration || 0">
         {{ currentTime / duration || 0 }}
       </progress>      
