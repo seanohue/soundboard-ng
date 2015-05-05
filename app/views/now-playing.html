@@ -2,7 +2,7 @@
   <div plangular="https://soundcloud.com/platform/tracks" id="trackinfo">
     
     
-    <div ng-repeat="track in tracks">
+    <div ng-repeat="track in tracks | filter: {player.playing === track.src}" >
 
       <h3>
         {{track.user.username}} - {{track.title}}
