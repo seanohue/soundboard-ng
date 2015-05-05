@@ -1,8 +1,8 @@
 <div ng-controller ="PlayerController as ham">
   <div plangular="https://soundcloud.com/platform/tracks" id="trackinfo">
     
-    <ul>
-      <li ng-repeat="track in tracks">
+    
+    <div ng-repeat="track in tracks">
 
       <h3>
         {{track.user.username}} - {{track.title}}
@@ -23,7 +23,8 @@
       <div id="view-link">
           <a ng-href="{{ track.permalink_url }}">View on SoundCloud</a>
       </div>
-     </li>
-    </ul>
+    
+    </div>
+    
   </div>
 </div>
