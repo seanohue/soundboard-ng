@@ -29,4 +29,17 @@
 		}
 	}]);
 
+	scControllers.controller('SearchController', ['$scope', function($scope) {
+		var vm = this;
+		vm.searchingFor = "Artists";
+		vm.changeSearch = function(newSearch);
+			vm.searchingFor = newSearch;
+		};
+		vm.searchTerms = function(){
+			return vm.searchingFor;
+		};
+
+	}]);
+
+
 })();
