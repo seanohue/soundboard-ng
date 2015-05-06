@@ -1,13 +1,14 @@
 <div class="row" ng-controller = "SearchController as search">
-    <div id = "searchbar" class="form-group col-xs-5">
-        <label for="code">Search</label>
-        <input type="text" class="form-control" />
-    </div> 
-    <div id = "searchpills">
-    	<ul class="nav nav-pills" role="tablist">
-  			<li role="presentation" class="active"><a href="#/search">Artists</a></li>
-  			<li role="presentation" class="active"><a href="#/search">Tracks</a></li>
-  			<li role="presentation" class="active"><a href="#/search">Playlists</a></li>
-		</ul>
-    </div>
+	    <div id = "searchbar" class="form-group col-xs-5">
+	        <label for="code">Search</label>
+	        <input type="text" class="form-control" />
+	    	<div id = "searchpills">
+    			<ul class="nav nav-pills" role="tablist" id = "{{search.term()}}">
+		  			<li role="presentation" class="active"><a href="#/search" ng-click="search.change('Artists')">Artists</a></li>
+		  			<li role="presentation" class="active"><a href="#/search" ng-click="search.change('Tracks')">Tracks</a></li>
+		  			<li role="presentation" class="active"><a href="#/search" ng-click="search.change('Playlists')">Playlists</a></li>
+				</ul>
+		  	</div>
+		  	<p><br />Searching by {{search.term()}}</p>
+	    </div> 
 </div>
