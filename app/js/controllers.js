@@ -20,6 +20,8 @@
 
 	scControllers.controller('DisplayController', ['$scope', function($scope) {
 		//maybe get the track index from plangular and use that to set $index? how would that work and would it even solve the problem?
+		//or do a refesh?
+		//or somehow send the track information along with whenever the next or prev button is pressed?!?!?!?!?!
 		var vm = this;
 		vm.active = 'now';
 		vm.setNav = function(nav){
@@ -41,6 +43,5 @@
 		};
 
 	}]);
-
 
 })();
