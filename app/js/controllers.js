@@ -19,6 +19,7 @@
 
 
 	scControllers.controller('DisplayController', ['$scope', function($scope) {
+		//maybe get the track index from plangular and use that to set $index? how would that work and would it even solve the problem?
 		var vm = this;
 		vm.active = 'now';
 		vm.setNav = function(nav){
