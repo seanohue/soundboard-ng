@@ -42,7 +42,7 @@
 		vm.term = "I don't even know what a computer is.";
 		vm.searchFilter = "Artists";
 		vm.change = function(newSearch){
-			vm.searchingFor = newSearch;
+			vm.searchFilter = newSearch;
 		};
 		vm.category = function(){
 			return vm.searchFilter;
