@@ -2,7 +2,9 @@
 	var scControllers = angular.module('scControllers', [
 		]);
 
-	scControllers.controller('PlayerController', ['$scope', function($scope) {
+	scControllers.controller('PlayerController', [
+		'$scope', 
+		function($scope) {
 	  var vm = this;
 	  vm.playingNow = false;
 	  vm.greeting = 'SoundBoard';
@@ -18,7 +20,9 @@
 	}]);
 
 
-	scControllers.controller('DisplayController', ['$scope', function($scope) {
+	scControllers.controller('DisplayController', [
+		'$scope', 
+		function($scope) {
 		var vm = this;
 		vm.active = 'now';
 		vm.setNav = function(nav){
@@ -29,7 +33,10 @@
 		}
 	}]);
 
-	scControllers.controller('SearchController', ['$scope', function($scope) {
+	scControllers.controller('SearchController', [
+		'$scope', 
+		'SearchService',
+		function($scope) {
 		var vm = this;
 		vm.searchingFor = "Artists";
 		vm.change = function(newSearch){
