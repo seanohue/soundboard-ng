@@ -38,12 +38,12 @@
 		'SearchService',
 		function($scope) {
 		var vm = this;
-		vm.searchingFor = "Artists";
+		vm.searchFilter = "Artists";
 		vm.change = function(newSearch){
 			vm.searchingFor = newSearch;
 		};
-		vm.term = function(){
-			return vm.searchingFor;
+		vm.category = function(){
+			return vm.searchFilter;
 		};
 
 	}]);
