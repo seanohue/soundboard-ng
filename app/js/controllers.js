@@ -1,5 +1,6 @@
 (function(){
 	var scControllers = angular.module('scControllers', [
+		'scServices'
 		]);
 
 	scControllers.controller('PlayerController', [
@@ -35,9 +36,10 @@
 
 	scControllers.controller('SearchController', [
 		'$scope', 
-		'SearchService',
-		function($scope) {
+		//'SearchService',
+		function($scope, SearchService) {
 		var vm = this;
+		vm.term = "I don't even know what a computer is.";
 		vm.searchFilter = "Artists";
 		vm.change = function(newSearch){
 			vm.searchingFor = newSearch;
