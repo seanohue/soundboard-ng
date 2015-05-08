@@ -36,7 +36,7 @@
 
 	scControllers.controller('SearchController', [
 		'$scope', 
-		//'SearchService',
+		'SearchService',
 		function($scope, SearchService) {
 		var vm = this;
 		vm.term = "I don't even know what a computer is.";
@@ -46,6 +46,12 @@
 		};
 		vm.category = function(){
 			return vm.searchFilter;
+		};
+		vm.getResults = function(searchFor){
+			var searchFor = searchFor.toLowerCase();
+			console.log(vm.searchFilter);
+			var cat = vm.searchFilter.toLowerCase();
+			return SearchService.getResults(searchFor, cat);
 		};
 
 	}]);
