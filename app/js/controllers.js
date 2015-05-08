@@ -36,7 +36,7 @@
 
 	scControllers.controller('SearchController', [
 		'$scope', 
-		//'SearchService',
+		'SearchService',
 		function($scope, SearchService) {
 		var vm = this;
 		vm.term = "I don't even know what a computer is.";
