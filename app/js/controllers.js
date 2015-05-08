@@ -47,6 +47,11 @@
 		vm.category = function(){
 			return vm.searchFilter;
 		};
+		vm.getResults = function(searchFor, category){
+			searchFor = searchFor.toLowerCase();
+			category = category.toLowerCase();
+			return SearchService.getResults(searchFor, category);
+		};
 
 	}]);
 
