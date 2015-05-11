@@ -31,7 +31,7 @@ body{
 #previous {
   position: absolute;
   left: 5px;
-  top: 105px;
+  top: 100px;
   height: 85px;
   width: 85px;
   padding: 10px;
@@ -39,7 +39,7 @@ body{
 
 #play {
   position: absolute;
-  top: 80px;
+  top: 75px;
   left: 95px;
   width: 128px;
   height: 128px;
@@ -47,7 +47,7 @@ body{
 
 #next {
   position: absolute;
-  top: 105px;
+  top: 100px;
   left: 230px;
   width: 85px;
   height: 85px;
@@ -67,12 +67,15 @@ progress {
 }
 
 #trackimg {
-  margin-left: 100px;
-  display: inline;
+  position: absolute;
+  top: 75px;
+  left: 425px;
 }
 
 #trackimg img{
   border: 4px solid black;
+  width: 126px;
+  height: 126px;
 }
 
 #closebutton {
