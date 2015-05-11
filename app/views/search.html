@@ -1,22 +1,23 @@
 <div id = "searchpage" ng-controller = "SearchController as search">
-	    
-	    	<div id = "searchpills">
-		  		<div id = 'artists' ng-click="search.change('Artists')">
-		  			<button >Artists</button>
-		  		</div>
-		  		<div id = 'tracks' ng-click="search.change('Tracks')">
-		  			<button >Tracks</button>
-		  		</div>
-		  		<div id = 'playlists' ng-click="search.change('Playlists')">
-		  			<button >Playlists</button>
-		  		</div>
-		  	</div>
+    <p id = "searchingby"><br />Search SoundCloud<br /></p>
+	<div id = "searchpills">
+  		<div id = 'artists' ng-click="search.change('Artists')">
+  			<button >Artists</button>
+  		</div>
+  		<div id = 'tracks' ng-click="search.change('Tracks')">
+  			<button >Tracks</button>
+  		</div>
+  		<div id = 'playlists' ng-click="search.change('Playlists')">
+  			<button >Playlists</button>
+  		</div>
+  	</div>
 
-			<div id = "searchbar">
-	        	<input placeholder = "search" ng-model="search.term"/>
-	    	</div>
+	<div id = "searchbar">
+    	<input placeholder = "search" ng-model="search.term"/>
+	</div>
 
-		  	<p id = "searchingby"><br />Search SoundCloud<br /></p>
-		  	<button id = "searchbutton" ng-click = "search.getResults(search.term, search.category)">Search {{search.category()}}</button>
-	    </div> 
+	 <div id = "searchpress"  ng-click = "search.getResults(search.term, search.category)">
+	  	<button id = "searchbutton">Search {{search.category()}}</button>
+	  </div>
+    </div> 
 </div>

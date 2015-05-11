@@ -185,6 +185,15 @@ a {
   padding: 15px;
 }
 
+#searchpress {
+  position: absolute;
+  width: 290px;
+  height: 75px;
+  padding: 10px;
+  top: 240px;
+  left: 45px;
+}
+
 #searchbar {
   position: absolute;
   top: 175px;
@@ -208,18 +217,69 @@ a {
 #searchbutton {
   position: absolute;
   font-family: "Luckiest Guy", sans-serif;
-  top: 250px;
-  left: 55px;
   color: #FF6600;
   font-size: 24px;
   background-color: #666;
   padding-top: 10px;
 }
 
-#loginform {
-  margin-left: 20px;
+#logheader {
+  font-family: "Luckiest Guy", sans-serif;
+  font-size: 29px;
+  position: absolute;
+  top: 55px;
+  left: 55px;
 }
 
-#loginform button {
-  margin-left: 20px;
+#loginform form input{
+  width: 300px;
+  height: 36px;
+  font-size: 29px;
+}
+
+#username {
+  font-family: "Luckiest Guy", sans-serif;
+  position: absolute;
+  top: 135px;
+  left: 55px;
+  font-size: 22px;
+}
+
+#password {
+  font-family: "Luckiest Guy", sans-serif;
+  position: absolute;
+  top: 195px;
+  left: 55px;
+  font-size: 22px;
+}
+
+#logbuttons {
+  position: absolute;
+  top: 255px;
+  font-size: 22px;
+}
+
+#logbuttons .submit, .clear {
+  position: absolute;
+  height: 85px;
+  width: 99px;
+}
+
+.submit {
+  position: absolute;
+  left: 55px;
+}
+
+.clear{
+  position: absolute;
+  left: 195px;
+}
+
+#logbuttons button {
+  font-family: "Luckiest Guy", sans-serif;
+  color: #FF6600;
+  font-size: 24px;
+  background-color: #666;
+  padding-top: 10px;
+  margin-right: 30px;
 }
