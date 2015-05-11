@@ -7,7 +7,7 @@
 		'$scope', 
 		function($scope) {
 	  var vm = this;
-	  vm.playingNow = false;
+	  $scope.playingNow = false;
 	  vm.greeting = 'SoundBoard';
 	  vm.togglePlay = function(){
 	  	console.log(vm.playingNow);
@@ -19,7 +19,6 @@
 	  	return vm.playingNow;
 	  };
 	}]);
-
 
 	scControllers.controller('DisplayController', [
 		'$scope', 
@@ -55,6 +54,5 @@
 		};
 
 	}]);
-
 
 })();
