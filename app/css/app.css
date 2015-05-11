@@ -18,14 +18,17 @@ body{
   src: url(../font/LuckiestGuy.ttf) format("truetype");
 }
 
-#trackinfo {
-  margin-left: 50px;
-}
-
 #track {
   position: absolute;
   left: 20px;
   top: 55px;
+}
+
+#trackinfo{
+  position: absolute;
+  top: 0px;
+  left: 35px;
+  width: 700px;
 }
 
 #previous {
@@ -62,8 +65,10 @@ progress {
 
 #time {
   position: absolute;
-  top: 222px;
+  top: 220px;
   left: 265px;
+  width: 150px;
+  font-size: 18px;
 }
 
 #trackimg {
