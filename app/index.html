@@ -16,7 +16,7 @@
 
 <body ng-app="app" id="main" class="innershadow"> 
    <header class="innershadow" id="branding" ng-controller="DisplayController as display">
-     <img src="img/Close-2-icon.png" alt="" id="closebutton">
+    
      <nav class="{{display.getActive()}}">
        <ul class="nav-tabs" id="sb-tabs">
         <li class = "now">
@@ -32,7 +32,10 @@
         <li class = "login">
           <a href="#/login" ng-click="display.setNav('login')">
           Log In 
-          </a>    
+          </a>          
+        </li>
+        <li>
+           <img src="img/Close-2-icon.png" alt="" id="closebutton">
         </li>
       </ul>
     </nav>
