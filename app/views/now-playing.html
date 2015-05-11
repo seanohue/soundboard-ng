@@ -5,16 +5,23 @@
       <h3>
         {{track.user.username}} - {{track.title}}
       </h3> 
-      <img src="img/previous.png" ng-click="previous()">  
-      <img src="img/play-icon.png" alt="" ng-click="play($index); ham.togglePlay()" ng-hide="ham.nowPlaying()"> 
-      <img src="img/pause-icon.png" ng-click="pause(); ham.togglePlay()" ng-hide="!ham.nowPlaying()">   
-      <img src="img/next.png" ng-click="next()"> 
+      <div ng-click="previous()" id="previous">
+        <img src="img/previous.png" >  
+      </div>
+      <div ng-click="playPause($index); ham.togglePlay()" id="play">
+        <img src="img/play-icon.png" alt=""  ng-hide="ham.nowPlaying()"> 
+        <img src="img/pause-icon.png" ng-hide="!ham.nowPlaying()">  
+      </div>
+      <div id="next">
+        <img src="img/next.png" ng-click="next()">
+      </div> 
+      <small id="time">
+        {{ currentTime | hhmmss }} | {{ duration | hhmmss }}
+      </small>
       <progress ng-value="currentTime / duration || 0">
         {{ currentTime / duration || 0 }}
       </progress>      
-      <small>
-        {{ currentTime | hhmmss }} | {{ duration | hhmmss }}
-      </small>    
+          
       <div id="trackimg">
           <img ng-src="{{ track.artwork_url  }}" alt="{{ track.title }}" />
       </div>
