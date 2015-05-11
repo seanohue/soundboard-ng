@@ -18,14 +18,17 @@ body{
   src: url(../font/LuckiestGuy.ttf) format("truetype");
 }
 
-#trackinfo {
-  margin-left: 50px;
-}
-
 #track {
   position: absolute;
   left: 20px;
   top: 55px;
+}
+
+#trackinfo{
+  position: absolute;
+  top: 0px;
+  left: 35px;
+  width: 700px;
 }
 
 #previous {
@@ -62,8 +65,10 @@ progress {
 
 #time {
   position: absolute;
-  top: 222px;
+  top: 220px;
   left: 265px;
+  width: 150px;
+  font-size: 18px;
 }
 
 #trackimg {
@@ -145,8 +150,70 @@ a {
   color: #FF6600;
 }
 
+#searchpills button {
+  color: #FF6600;
+  font-size: 20px;
+  background-color: #666;
+  font-family: "Luckiest Guy", sans-serif;
+  padding-top: 5px;
+}
+
+#artists {
+  position: absolute;
+  top: 105px;
+  left: 40px;
+  width: 55px;
+  height: 55px;
+  padding: 15px;
+}
+
+#tracks {
+  position: absolute;
+  top: 105px;
+  left: 160px;
+  width: 75px;
+  height: 55px;
+  padding: 15px;
+}
+
+#playlists {
+  position: absolute;
+  top: 105px;
+  left: 280px;
+  width: 85px;
+  height: 55px;
+  padding: 15px;
+}
+
 #searchbar {
-  margin: 20px;
+  position: absolute;
+  top: 175px;
+  left: 55px;
+}
+
+#searchbar input {
+  width: 300px;
+  height: 40px;
+  font-size: 29px;
+}
+
+#searchingby {
+  font-family: "Luckiest Guy", sans-serif;
+  font-size: 29px;
+  position: absolute;
+  top: 25px;
+  left: 55px;
+}
+
+#searchbutton {
+  position: absolute;
+  font-family: "Luckiest Guy", sans-serif;
+  top: 250px;
+  left: 55px;
+  color: #FF6600;
+  font-size: 24px;
+  background-color: #666;
+  padding-top: 10px;
 }
 
 #loginform {
