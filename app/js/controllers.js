@@ -39,6 +39,7 @@
 		function($scope, SearchService) {
 		var vm = this;
 		vm.term = "";
+		vm.results = []
 		vm.searchFilter = "Artists";
 		vm.change = function(newSearch){
 			vm.searchFilter = newSearch;
@@ -56,8 +57,12 @@
 			var searchFor = searchFor.toLowerCase();
 			console.log(vm.searchFilter);
 			var cat = vm.searchFilter.toLowerCase();
-			return SearchService.getSearchText(searchFor, cat);
+			vm.results = SearchService.getSearchText(searchFor, cat);
 		};
+		vm.searched = false;
+		vm.toggleSearched = function(){
+			vm.searched = !vm.searched;
+		}
 
 	}]);
 

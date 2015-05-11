@@ -16,8 +16,15 @@
     	<input placeholder = "search" ng-model="search.term"/>
 	</div>
 
-	 <div id = "searchpress"  ng-click = "search.getResults(search.term, search.category); search.getSearchText(search.term, search.category)">
-	  	<button id = "searchbutton">Search {{search.category()}}</button>
-	  </div>
-    </div> 
+	<div id = "searchpress"  ng-click = "search.getResults(search.term, search.category); search.getSearchText(search.term, search.category); search.toggleSearched()">
+	   <button id = "searchbutton">Search {{search.category()}}</button>
+	</div>
+
+  <div id = "searchresults">
+      <div id = "result" >
+        <p ng-repeat = "result in search.results | limitTo: 5">{{result}}</p>
+        test
+      </div>
+  </div>
+
 </div>
