@@ -18,26 +18,26 @@
    <header class="innershadow" id="branding" ng-controller="DisplayController as display">
     
      <nav class="{{display.getActive()}}">
-       <ul class="nav-tabs" id="sb-tabs">
-        <li class = "now">
+       <div class="nav-tabs" id="sb-tabs">
+        <div class = "now">
           <a href="#/" ng-click="display.setNav('now')">
-          Now Playing 
+            Now Playing 
           </a>       
-        </li>
-        <li class = "search">
+        </div>
+        <div class = "search">
           <a href="#/search" ng-click="display.setNav('search')">
-          Search  
+            Search  
           </a>      
-        </li>
-        <li class = "login">
+        </div>
+        <div class = "login">
           <a href="#/login" ng-click="display.setNav('login')">
           Log In 
           </a>          
-        </li>
-        <li>
-           <img src="img/Close-2-icon.png" alt="" id="closebutton">
-        </li>
-      </ul>
+        </div>
+        <div id = "closebutton">
+           <img src="img/Close-2-icon.png" alt="" id= "closeimage">
+        </div>
+      </div>
     </nav>
    </header>
     

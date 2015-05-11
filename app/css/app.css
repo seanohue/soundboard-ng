@@ -9,6 +9,10 @@
   font-family: sans-serif;
 }
 
+body{
+  margin: 0;
+}
+
 @font-face{
   font-family: "Luckiest Guy";
   src: url(../font/LuckiestGuy.ttf) format("truetype");
@@ -28,11 +32,42 @@
 }
 
 #closebutton {
-  margin-left: 350px;
-  display: inline;
   position: absolute;
-  top: 0;
-  right: 5px;
+  top: 0px;
+  left: 675px;
+  width: 85px;
+  height: 80px;
+}
+
+#closeimage {
+  margin-left: 20px;
+}
+
+.now {
+  position: absolute;
+  top: 5px;
+  left: 30px;
+  display: inline;
+  width: 200px;
+  height: 80px;
+}
+
+.search {
+  position: absolute;
+  top: 5px;
+  left: 250px;
+  display: inline;
+  width: 105px;
+  height: 80px;
+}
+
+.login {
+  position: absolute;
+  top: 5px;
+  left: 385px;
+  display: inline;
+  width: 105px;
+  height: 80px;
 }
 
 header {
@@ -45,27 +80,16 @@ header {
   /*padding-top: 10px;*/
   background-color: #666;
   height: 50px;
-}
-
-header h1 {
-  margin-left: 220px;
   /*margin-bottom: 5px;*/
-  font-size: 36px;
-  display: inline;
+  font-size: 28px;
   color: #FF6600;
 }
 
-nav.now .now,
-nav.search .search,
-nav.login .login,
+nav.now #now,
+nav.search #search,
+nav.login #login,
 {
   background-color:#000;
-}
-
-#sb-tabs ul, li 
-{
-  display: inline-block;
-  margin-right: 35px;
 }
 
 .innershadow {
@@ -78,13 +102,6 @@ a {
   color: #FF6600;
 }
 
-.close {
-  float: right;
-  margin-right: 30px;
-  margin-top: 30px;
-  padding: 5px;
-  border-radius: 10px;
-}
 
 #searchbar {
   margin: 20px;
