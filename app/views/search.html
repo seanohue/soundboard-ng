@@ -16,7 +16,7 @@
     	<input placeholder = "search" ng-model="search.term"/>
 	</div>
 
-	 <div id = "searchpress"  ng-click = "search.getResults(search.term, search.category)">
+	 <div id = "searchpress"  ng-click = "search.getResults(search.term, search.category); search.getSearchText(search.term, search.category)">
 	  	<button id = "searchbutton">Search {{search.category()}}</button>
 	  </div>
     </div> 

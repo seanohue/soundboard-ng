@@ -52,6 +52,12 @@
 			var cat = vm.searchFilter.toLowerCase();
 			return SearchService.getResults(searchFor, cat);
 		};
+		vm.getSearchText = function(searchFor){
+			var searchFor = searchFor.toLowerCase();
+			console.log(vm.searchFilter);
+			var cat = vm.searchFilter.toLowerCase();
+			return SearchService.getSearchText(searchFor, cat);
+		};
 
 	}]);
 
