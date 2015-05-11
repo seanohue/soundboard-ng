@@ -89,10 +89,11 @@ progress {
   left: 675px;
   width: 85px;
   height: 80px;
+  padding-left: 30px;
 }
 
 #closeimage {
-  margin-left: 20px;
+  margin-top: 5px;
 }
 
 .now {
