@@ -145,6 +145,39 @@ a {
   color: #FF6600;
 }
 
+#searchpills button {
+  color: #FF6600;
+  font-size: 20px;
+  background-color: #666;
+}
+
+#artists {
+  position: absolute;
+  top: 105px;
+  left: 50px;
+  width: 55px;
+  height: 55px;
+  padding: 15px;
+}
+
+#tracks {
+  position: absolute;
+  top: 105px;
+  left: 160px;
+  width: 75px;
+  height: 55px;
+  padding: 15px;
+}
+
+#playlists {
+  position: absolute;
+  top: 105px;
+  left: 280px;
+  width: 85px;
+  height: 55px;
+  padding: 15px;
+}
+
 #searchbar {
   margin: 20px;
 }
