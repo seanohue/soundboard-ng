@@ -7,7 +7,6 @@
   <title>SoundBoard</title>
   <meta name="description" content="An in-dash proof of concept for the SoundCloud API">
   <meta name="author" content="Sean O'Donohue">  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/app.css">
   
   <!--[if lt IE 9]>
@@ -19,7 +18,7 @@
    <header class="innershadow" id="branding" ng-controller="DisplayController as display">
      <img src="img/Close-2-icon.png" alt="" id="closebutton">
      <nav class="{{display.getActive()}}">
-       <ul class="nav nav-tabs" id="sb-tabs">
+       <ul class="nav-tabs" id="sb-tabs">
         <li class = "now">
           <a href="#/" ng-click="display.setNav('now')">
           Now Playing 

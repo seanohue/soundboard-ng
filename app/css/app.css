@@ -35,7 +35,6 @@
 
 header {
   font-family: "Luckiest Guy", sans-serif;
-  text-align: center;
   border-bottom: 2px solid #CCC;
   /*padding-top: 10px;*/
   background-color: #666;
@@ -56,6 +55,12 @@ nav.search .search,
 nav.login .login,
 {
   background-color:#000;
+}
+
+#sb-tabs ul, li 
+{
+  display: inline;
+  margin-right: 35px;
 }
 
 .innershadow {
