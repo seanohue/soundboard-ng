@@ -185,6 +185,15 @@ a {
   padding: 15px;
 }
 
+#searchpress {
+  position: absolute;
+  width: 290px;
+  height: 75px;
+  padding: 10px;
+  top: 240px;
+  left: 45px;
+}
+
 #searchbar {
   position: absolute;
   top: 175px;
@@ -208,12 +217,19 @@ a {
 #searchbutton {
   position: absolute;
   font-family: "Luckiest Guy", sans-serif;
-  top: 250px;
-  left: 55px;
+  
   color: #FF6600;
   font-size: 24px;
   background-color: #666;
   padding-top: 10px;
+}
+
+#logheader {
+  font-family: "Luckiest Guy", sans-serif;
+  font-size: 29px;
+  position: absolute;
+  top: 55px;
+  left: 55px;
 }
 
 #loginform {
