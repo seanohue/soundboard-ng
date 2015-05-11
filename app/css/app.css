@@ -7,7 +7,6 @@
   background-color: #FF6600;
   color: #EEE;
   font-family: sans-serif;
-  padding: 0px;
 }
 
 @font-face{
@@ -29,24 +28,30 @@
 }
 
 #closebutton {
-  margin-left: 385px;
+  margin-left: 350px;
   display: inline;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 796px;
   font-family: "Luckiest Guy", sans-serif;
   border-bottom: 2px solid #CCC;
   /*padding-top: 10px;*/
   background-color: #666;
+  height: 50px;
 }
 
 header h1 {
-  margin: 0 auto;
   margin-left: 220px;
   /*margin-bottom: 5px;*/
-  padding-top: 10px;
-  font-size: 48px;
-  display: inline-block;
+  font-size: 36px;
+  display: inline;
   color: #FF6600;
 }
 
@@ -59,7 +64,7 @@ nav.login .login,
 
 #sb-tabs ul, li 
 {
-  display: inline;
+  display: inline-block;
   margin-right: 35px;
 }
 
