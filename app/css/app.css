@@ -232,8 +232,10 @@ a {
   left: 55px;
 }
 
-#loginform {
-  margin-left: 20px;
+#loginform form input{
+  width: 300px;
+  height: 40px;
+  font-size: 29px;
 }
 
 #loginform button {
