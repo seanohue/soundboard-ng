@@ -15,10 +15,9 @@
 </head>
 
 <body ng-app="app" id="main" class="innershadow"> 
-   <header class="innershadow" id="branding" ng-controller="DisplayController as display">
-    
-     <nav class="{{display.getActive()}}">
-       <div class="nav-tabs" id="sb-tabs">
+   <header class="innershadow" id="branding" ng-controller="DisplayController as display">   
+     <nav>
+       <div>
         <div class = "now" ng-click="display.setNav('now')">
           <a href="#/">
             Now Playing 

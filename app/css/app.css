@@ -22,13 +22,60 @@ body{
   margin-left: 50px;
 }
 
+#track {
+  position: absolute;
+  left: 20px;
+  top: 55px;
+}
+
+#previous {
+  position: absolute;
+  left: 15px;
+  top: 100px;
+  height: 85px;
+  width: 85px;
+  padding: 10px;
+}
+
+#play {
+  position: absolute;
+  top: 75px;
+  left: 105px;
+  width: 128px;
+  height: 128px;
+}
+
+#next {
+  position: absolute;
+  top: 100px;
+  left: 240px;
+  width: 85px;
+  height: 85px;
+  padding: 10px;
+}
+
+progress {
+  position: absolute;
+  top: 220px;
+  left: 90px;
+}
+
+#time {
+  position: absolute;
+  top: 222px;
+  left: 265px;
+}
+
 #trackimg {
-  margin-left: 100px;
-  display: inline;
+  position: absolute;
+  top: 60px;
+  left: 420px;
 }
 
 #trackimg img{
   border: 4px solid black;
+  width: 146px;
+  height: 146px;
 }
 
 #closebutton {
@@ -45,11 +92,12 @@ body{
 
 .now {
   position: absolute;
-  top: 5px;
+  top: 10px;
   left: 30px;
   display: inline;
   width: 200px;
   height: 80px;
+  padding: 5px;
 }
 
 .search {
@@ -59,15 +107,17 @@ body{
   display: inline;
   width: 105px;
   height: 80px;
+  padding: 10px;
 }
 
 .login {
   position: absolute;
   top: 5px;
-  left: 385px;
+  left: 390px;
   display: inline;
   width: 105px;
   height: 80px;
+  padding: 10px;
 }
 
 header {
@@ -85,13 +135,6 @@ header {
   color: #FF6600;
 }
 
-nav.now #now,
-nav.search #search,
-nav.login #login,
-{
-  background-color:#000;
-}
-
 .innershadow {
 -moz-box-shadow: inset 0 0 10px #000000;
 -webkit-box-shadow: inset 0 0 10px #000000;
@@ -101,7 +144,6 @@ box-shadow: inset 0 0 10px #000000;
 a {
   color: #FF6600;
 }
-
 
 #searchbar {
   margin: 20px;
