@@ -92,11 +92,12 @@ progress {
 
 .now {
   position: absolute;
-  top: 5px;
+  top: 10px;
   left: 30px;
   display: inline;
   width: 200px;
   height: 80px;
+  padding: 5px;
 }
 
 .search {
@@ -106,15 +107,17 @@ progress {
   display: inline;
   width: 105px;
   height: 80px;
+  padding: 10px;
 }
 
 .login {
   position: absolute;
   top: 5px;
-  left: 385px;
+  left: 390px;
   display: inline;
   width: 105px;
   height: 80px;
+  padding: 10px;
 }
 
 header {
