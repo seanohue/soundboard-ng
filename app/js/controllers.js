@@ -1,8 +1,11 @@
 (function(){
 	var scControllers = angular.module('scControllers', [
+		'scServices'
 		]);
 
-	scControllers.controller('PlayerController', ['$scope', function($scope) {
+	scControllers.controller('PlayerController', [
+		'$scope', 
+		function($scope) {
 	  var vm = this;
 	  $scope.playingNow = false;
 	  vm.greeting = 'SoundBoard';
@@ -17,11 +20,9 @@
 	  };
 	}]);
 
-
-	scControllers.controller('DisplayController', ['$scope', function($scope) {
-		//maybe get the track index from plangular and use that to set $index? how would that work and would it even solve the problem?
-		//or do a refesh?
-		//or somehow send the track information along with whenever the next or prev button is pressed?!?!?!?!?!
+	scControllers.controller('DisplayController', [
+		'$scope', 
+		function($scope) {
 		var vm = this;
 		vm.active = 'now';
 		vm.setNav = function(nav){
@@ -32,14 +33,24 @@
 		}
 	}]);
 
-	scControllers.controller('SearchController', ['$scope', function($scope) {
+	scControllers.controller('SearchController', [
+		'$scope', 
+		'SearchService',
+		function($scope, SearchService) {
 		var vm = this;
-		vm.searchingFor = "Artists";
+		vm.term = "I don't even know what a computer is.";
+		vm.searchFilter = "Artists";
 		vm.change = function(newSearch){
-			vm.searchingFor = newSearch;
+			vm.searchFilter = newSearch;
 		};
-		vm.term = function(){
-			return vm.searchingFor;
+		vm.category = function(){
+			return vm.searchFilter;
+		};
+		vm.getResults = function(searchFor){
+			var searchFor = searchFor.toLowerCase();
+			console.log(vm.searchFilter);
+			var cat = vm.searchFilter.toLowerCase();
+			return SearchService.getResults(searchFor, cat);
 		};
 
 	}]);
