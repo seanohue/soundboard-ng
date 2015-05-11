@@ -1,7 +1,5 @@
 <div id = "searchpage" ng-controller = "SearchController as search">
-	    <div id = "searchbar">
-	        <label for="search">Search</label>
-	        <input type="search" id="search" placeholder = "search" ng-model="search.term"/>
+	    
 	    	<div id = "searchpills">
 		  		<div id = 'artists' ng-click="search.change('Artists')">
 		  			<button >Artists</button>
@@ -13,7 +11,12 @@
 		  			<button >Playlists</button>
 		  		</div>
 		  	</div>
-		  	<p><br />Searching by {{search.category()}} <br /> {{search.term}}</p>
-		  	<p ng-click = "search.getResults(search.term, search.category)">Search</p>
+
+			<div id = "searchbar">
+	        	<input type="search" id="search" placeholder = "search" ng-model="search.term"/>
+	    	</div>
+
+		  	<p id = "searchingby"><br />Search SoundCloud<br /></p>
+		  	<button id = "searchbutton" ng-click = "search.getResults(search.term, search.category)">Search {{search.category()}}</button>
 	    </div> 
 </div>

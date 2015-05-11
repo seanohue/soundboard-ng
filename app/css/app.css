@@ -149,12 +149,14 @@ a {
   color: #FF6600;
   font-size: 20px;
   background-color: #666;
+  font-family: "Luckiest Guy", sans-serif;
+  padding-top: 5px;
 }
 
 #artists {
   position: absolute;
   top: 105px;
-  left: 50px;
+  left: 40px;
   width: 55px;
   height: 55px;
   padding: 15px;
@@ -180,6 +182,25 @@ a {
 
 #searchbar {
   margin: 20px;
+}
+
+#searchingby {
+  font-family: "Luckiest Guy", sans-serif;
+  font-size: 29px;
+  position: absolute;
+  top: 25px;
+  left: 55px;
+}
+
+#searchbutton {
+  position: absolute;
+  font-family: "Luckiest Guy", sans-serif;
+  top: 250px;
+  left: 55px;
+  color: #FF6600;
+  font-size: 24px;
+  background-color: #666;
+  padding-top: 10px;
 }
 
 #loginform {
