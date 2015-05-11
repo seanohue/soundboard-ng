@@ -22,6 +22,12 @@ body{
   margin-left: 50px;
 }
 
+#track {
+  position: absolute;
+  left: 20px;
+  top: 55px;
+}
+
 #trackimg {
   margin-left: 100px;
   display: inline;
