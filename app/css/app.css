@@ -7,7 +7,10 @@
   background-color: #FF6600;
   color: #EEE;
   font-family: sans-serif;
-  padding: 0px;
+}
+
+body{
+  margin: 0;
 }
 
 @font-face{
@@ -29,31 +32,62 @@
 }
 
 #closebutton {
-  margin-left: 150px;
+  position: absolute;
+  top: 0px;
+  left: 675px;
+  width: 85px;
+  height: 80px;
+}
+
+#closeimage {
+  margin-left: 20px;
+}
+
+.now {
+  position: absolute;
+  top: 5px;
+  left: 30px;
   display: inline;
+  width: 200px;
+  height: 80px;
+}
+
+.search {
+  position: absolute;
+  top: 5px;
+  left: 250px;
+  display: inline;
+  width: 105px;
+  height: 80px;
+}
+
+.login {
+  position: absolute;
+  top: 5px;
+  left: 385px;
+  display: inline;
+  width: 105px;
+  height: 80px;
 }
 
 header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 796px;
   font-family: "Luckiest Guy", sans-serif;
-  text-align: center;
   border-bottom: 2px solid #CCC;
   /*padding-top: 10px;*/
   background-color: #666;
-}
-
-header h1 {
-  margin: 0 auto;
-  margin-left: 220px;
+  height: 50px;
   /*margin-bottom: 5px;*/
-  padding-top: 10px;
-  font-size: 48px;
-  display: inline-block;
+  font-size: 28px;
   color: #FF6600;
 }
 
-nav.now .now,
-nav.search .search,
-nav.login .login,
+nav.now #now,
+nav.search #search,
+nav.login #login,
 {
   background-color:#000;
 }
@@ -68,13 +102,6 @@ a {
   color: #FF6600;
 }
 
-.close {
-  float: right;
-  margin-right: 30px;
-  margin-top: 30px;
-  padding: 5px;
-  border-radius: 10px;
-}
 
 #searchbar {
   margin: 20px;
