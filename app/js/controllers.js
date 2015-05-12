@@ -36,9 +36,11 @@
 	scControllers.controller('SearchController', [
 		'$scope', 
 		'SearchService',
-		function($scope, SearchService) {
+		'$timeout',
+		function($scope, SearchService, $timeout) {
 		var vm = this;
 		vm.term = "";
+		vm.results = [];
 		vm.searchFilter = "Artists";
 		vm.change = function(newSearch){
 			vm.searchFilter = newSearch;
@@ -52,6 +54,27 @@
 			var cat = vm.searchFilter.toLowerCase();
 			return SearchService.getResults(searchFor, cat);
 		};
+		vm.getSearchText = function(searchFor){
+			var searchFor = searchFor.toLowerCase();
+			console.log(vm.searchFilter);
+			var cat = vm.searchFilter.toLowerCase();	
+			$timeout(function() {
+				vm.results = SearchService.getSearchText(searchFor, cat);
+				console.log("recorded results are: " + vm.results);
+				console.log("timeout is working");
+				//$scope.$apply();
+        		//return vm.results;
+      		}, 200);
+		};
+
+		//vm.doSearch = function(searchFor){
+		//	vm.getSearchText(searchFor).then(function(//response){vm.results = SearchService.})
+		//}
+
+		vm.searched = false;
+		vm.toggleSearched = function(){
+			vm.searched = !vm.searched;
+		}
 
 	}]);
 

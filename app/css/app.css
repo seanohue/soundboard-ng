@@ -224,6 +224,13 @@ a {
   padding-top: 10px;
 }
 
+#searchresults{
+  position: absolute;
+  font-size: 18px;
+  top: 85px;
+  left: 455px;
+}
+
 #logheader {
   font-family: "Luckiest Guy", sans-serif;
   font-size: 29px;
