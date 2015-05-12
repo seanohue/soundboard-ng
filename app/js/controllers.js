@@ -58,6 +58,8 @@
 			console.log(vm.searchFilter);
 			var cat = vm.searchFilter.toLowerCase();
 			vm.results = SearchService.getSearchText(searchFor, cat);
+			console.log("recorded results are: " + vm.results);
+			return vm.results;
 		};
 		vm.searched = false;
 		vm.toggleSearched = function(){
