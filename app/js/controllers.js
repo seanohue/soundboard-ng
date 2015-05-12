@@ -36,11 +36,11 @@
 	scControllers.controller('SearchController', [
 		'$scope', 
 		'SearchService',
-		'$timeout'
+		'$timeout',
 		function($scope, SearchService, $timeout) {
 		var vm = this;
 		vm.term = "";
-		vm.results = []
+		vm.results = [];
 		vm.searchFilter = "Artists";
 		vm.change = function(newSearch){
 			vm.searchFilter = newSearch;
@@ -58,9 +58,14 @@
 			var searchFor = searchFor.toLowerCase();
 			console.log(vm.searchFilter);
 			var cat = vm.searchFilter.toLowerCase();
-			vm.results = SearchService.getSearchText(searchFor, cat);
-			console.log("recorded results are: " + vm.results);
-			return vm.results;
+			
+			
+			$timeout(function() {
+				vm.results = SearchService.getSearchText(searchFor, cat);
+				console.log("recorded results are: " + vm.results);
+				console.log("timeout is working");
+        		return vm.results;
+      		}, 200);
 		};
 
 		//vm.doSearch = function(searchFor){
