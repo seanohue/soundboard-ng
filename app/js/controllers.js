@@ -36,7 +36,8 @@
 	scControllers.controller('SearchController', [
 		'$scope', 
 		'SearchService',
-		function($scope, SearchService) {
+		'$timeout'
+		function($scope, SearchService, $timeout) {
 		var vm = this;
 		vm.term = "";
 		vm.results = []
@@ -61,6 +62,11 @@
 			console.log("recorded results are: " + vm.results);
 			return vm.results;
 		};
+
+		//vm.doSearch = function(searchFor){
+		//	vm.getSearchText(searchFor).then(function(//response){vm.results = SearchService.})
+		//}
+
 		vm.searched = false;
 		vm.toggleSearched = function(){
 			vm.searched = !vm.searched;
