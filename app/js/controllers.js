@@ -57,14 +57,13 @@
 		vm.getSearchText = function(searchFor){
 			var searchFor = searchFor.toLowerCase();
 			console.log(vm.searchFilter);
-			var cat = vm.searchFilter.toLowerCase();
-			
-			
+			var cat = vm.searchFilter.toLowerCase();	
 			$timeout(function() {
 				vm.results = SearchService.getSearchText(searchFor, cat);
 				console.log("recorded results are: " + vm.results);
 				console.log("timeout is working");
-        		return vm.results;
+				//$scope.$apply();
+        		//return vm.results;
       		}, 200);
 		};
 

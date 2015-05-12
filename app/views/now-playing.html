@@ -5,15 +5,15 @@
       <h3 id="trackinfo">
         {{track.user.username}} - {{track.title}}
       </h3> 
-      <div ng-click="previous()" id="previous">
+      <div ng-mousedown="previous()" id="previous">
         <img src="img/previous.png" >  
       </div>
-      <div ng-click="playPause($index); ham.togglePlay()" id="play">
+      <div ng-mousedown="playPause($index); ham.togglePlay()" id="play">
         <img src="img/play-icon.png" alt=""  ng-hide="ham.nowPlaying()"> 
         <img src="img/pause-icon.png" ng-hide="!ham.nowPlaying()">  
       </div>
       <div id="next">
-        <img src="img/next.png" ng-click="next()">
+        <img src="img/next.png" ng-mousedown="next()">
       </div> 
       <small id="time">
         {{ currentTime | hhmmss }} | {{ duration | hhmmss }}

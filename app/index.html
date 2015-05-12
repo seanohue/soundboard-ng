@@ -18,17 +18,17 @@
    <header class="innershadow" id="branding" ng-controller="DisplayController as display">   
      <nav>
        <div>
-        <div class = "now" ng-click="display.setNav('now')">
+        <div class = "now" ng-mousedown="display.setNav('now')">
           <a href="#/">
             Now Playing 
           </a>       
         </div>
-        <div class = "search"  ng-click="display.setNav('search')">
+        <div class = "search"  ng-mousedown="display.setNav('search')">
           <a href="#/search">
             Search  
           </a>      
         </div>
-        <div class = "login"  ng-click="display.setNav('login')">
+        <div class = "login"  ng-mousedown="display.setNav('login')">
           <a href="#/login">
           Log In 
           </a>          
