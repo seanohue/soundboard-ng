@@ -52,7 +52,10 @@
 			var searchFor = searchFor.toLowerCase();
 			console.log(vm.searchFilter);
 			var cat = vm.searchFilter.toLowerCase();
-			return SearchService.getResults(searchFor, cat);
+			SearchService.getSearchText(searchFor, cat).then(function(data) {
+                vm.results = data;
+            });
+			return vm.results;
 		};
 		vm.getSearchText = function(searchFor){
 			var searchFor = searchFor.toLowerCase();

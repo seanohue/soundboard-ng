@@ -21,7 +21,7 @@
 	</div>
 
   <ul id = "searchresults">
-      <li id = "result" ng-repeat = "searchresult in search.results">
+      <li id = "result" ng-repeat = "searchresult in search.results | limitTo: 10">
         {{searchresult.username}}
       </li>
   </ul>
