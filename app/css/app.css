@@ -223,7 +223,6 @@ a:hover {
 
 #searchbutton {
   position: absolute;
-  color: #FF6600;
   font-size: 24px;
   background-color: #333;
   padding-top: 10px;
@@ -233,8 +232,25 @@ a:hover {
 #searchresults{
   position: absolute;
   font-size: 18px;
-  top: 85px;
-  left: 455px;
+  top: 40px;
+  left: 428px;
+}
+
+#result{
+  padding: 5px;
+  list-style: none;
+  width: 205px;
+  height: 60px;
+  margin: 5px;
+}
+
+#result button{
+
+  font-size: 22px;
+  background-color: #333;
+  padding-top: 10px;
+  color: white;
+  width: 195px;
 }
 
 #logheader {
