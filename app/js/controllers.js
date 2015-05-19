@@ -11,6 +11,7 @@
 	  $scope.playingNow = false;
 	  vm.greeting = 'SoundBoard';
 
+
 	  vm.togglePlay = function(){
 	  	console.log(vm.playingNow);
 	  	console.log("toggling so hard right now");
@@ -19,16 +20,13 @@
 	  };
 
 	  vm.getSelection = function(){
-	  	return SearchService.selection+"/tracks";
-	  };
-
-	  vm.setSelection = function(selectionURL){
-	  	SearchService.setSelection(selectionURL);
+	  	return SearchService.getSelection()+"/tracks";
 	  };
 
 	  vm.nowPlaying = function(){
 	  	return vm.playingNow;
 	  };
+
 	}]);
 
 	scControllers.controller('DisplayController', [
@@ -82,6 +80,11 @@
         		//return vm.results;
       		}, 200);
 		};
+
+		vm.setSelection = function(selectionURL){
+	  		console.log("pres butan " + selectionURL);
+	  		SearchService.setSelection(selectionURL);
+	  	};
 
 		vm.searched = false;
 		vm.toggleSearched = function(){
