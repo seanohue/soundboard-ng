@@ -3,7 +3,7 @@
     <div ng-repeat="track in tracks | limitTo: 1" >
 <!-- | filter: {player.playing === track.src} -->
       <h3 id="trackinfo">
-        {{track.user.username}} - {{track.title}}
+        {{track.user.username | truncate}} - {{track.title | truncate: 20}}
       </h3> 
       <div ng-mousedown="previous(); ham.togglePlay()" id="previous">
         <img src="img/previous.png" >  
