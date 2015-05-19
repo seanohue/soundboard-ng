@@ -1,13 +1,12 @@
 (function(){
 	var scFilters = angular.module('scFilters', [
-		'scControllers'
 		]);
 
 	scFilters.filter('truncate', [function(){
 		return function (text, length, end){
     		if (text !== undefined){
       			if (isNaN(length)){
-       				length = 10;
+       				length = 16;
       			}
 
 	      		if (end === undefined){
