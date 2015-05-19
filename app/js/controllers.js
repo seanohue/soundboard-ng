@@ -5,19 +5,28 @@
 
 	scControllers.controller('PlayerController', [
 		'$scope', 
-		function($scope) {
+		'SearchService',
+		function($scope, SearchService) {
 	  var vm = this;
 	  $scope.playingNow = false;
 	  vm.greeting = 'SoundBoard';
+
+
 	  vm.togglePlay = function(){
 	  	console.log(vm.playingNow);
 	  	console.log("toggling so hard right now");
 	  	vm.playingNow = !vm.playingNow;
 	  	console.log(vm.playingNow);
 	  };
+
+	  vm.getSelection = function(){
+	  	return SearchService.getSelection()+"/tracks";
+	  };
+
 	  vm.nowPlaying = function(){
 	  	return vm.playingNow;
 	  };
+
 	}]);
 
 	scControllers.controller('DisplayController', [
@@ -72,9 +81,10 @@
       		}, 200);
 		};
 
-		//vm.doSearch = function(searchFor){
-		//	vm.getSearchText(searchFor).then(function(//response){vm.results = SearchService.})
-		//}
+		vm.setSelection = function(selectionURL){
+	  		console.log("pres butan " + selectionURL);
+	  		SearchService.setSelection(selectionURL);
+	  	};
 
 		vm.searched = false;
 		vm.toggleSearched = function(){
