@@ -3,7 +3,7 @@
 		'scControllers'
 		]);
 
-	scFilters.filter('truncate', ['$scope', function($scope){
+	scFilters.filter('truncate', [function(){
 		return function (text, length, end){
     		if (text !== undefined){
       			if (isNaN(length)){
