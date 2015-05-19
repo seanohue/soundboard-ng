@@ -5,16 +5,23 @@
 
 	scControllers.controller('PlayerController', [
 		'$scope', 
-		function($scope) {
+		'SearchService'
+		function($scope, SearchService) {
 	  var vm = this;
 	  $scope.playingNow = false;
 	  vm.greeting = 'SoundBoard';
+
 	  vm.togglePlay = function(){
 	  	console.log(vm.playingNow);
 	  	console.log("toggling so hard right now");
 	  	vm.playingNow = !vm.playingNow;
 	  	console.log(vm.playingNow);
 	  };
+
+	  vm.getSelection = function(){
+	  	return SearchService.selection;
+	  }
+
 	  vm.nowPlaying = function(){
 	  	return vm.playingNow;
 	  };
