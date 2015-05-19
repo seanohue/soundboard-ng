@@ -21,7 +21,7 @@
 	</div>
 
   <ul id = "searchresults">
-      <li id = "result" ng-repeat = "searchresult in search.results | limitTo: 10">
+      <li id = "result" ng-repeat = "searchresult in search.results | limitTo: 10" ng-mousedown = "setSelection(searchresult.permalink_url)">
         {{searchresult.username}}
       </li>
   </ul>

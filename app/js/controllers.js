@@ -5,7 +5,7 @@
 
 	scControllers.controller('PlayerController', [
 		'$scope', 
-		'SearchService'
+		'SearchService',
 		function($scope, SearchService) {
 	  var vm = this;
 	  $scope.playingNow = false;
@@ -20,7 +20,11 @@
 
 	  vm.getSelection = function(){
 	  	return SearchService.selection;
-	  }
+	  };
+
+	  vm.setSelection = function(selectionURL){
+	  	SearchService.setSelection(selectionURL);
+	  };
 
 	  vm.nowPlaying = function(){
 	  	return vm.playingNow;
