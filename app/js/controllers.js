@@ -52,11 +52,13 @@
 			var searchFor = searchFor.toLowerCase();
 			console.log(vm.searchFilter);
 			var cat = vm.searchFilter.toLowerCase();
+			// had to change this bit to include data, and make a .then call
 			SearchService.getSearchText(searchFor, cat).then(function(data) {
                 vm.results = data;
             });
 			return vm.results;
 		};
+		//this function is no longer necessary, i think
 		vm.getSearchText = function(searchFor){
 			var searchFor = searchFor.toLowerCase();
 			console.log(vm.searchFilter);
