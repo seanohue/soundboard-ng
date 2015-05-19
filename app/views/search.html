@@ -23,7 +23,7 @@
   <ul id = "searchresults">
       <li id = "result" ng-repeat = "searchresult in search.results | limitTo: 4">
         <button>
-        {{searchresult.username}}
+        {{searchresult.username | truncate}}
         </button>
       </li>
   </ul>

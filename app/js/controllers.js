@@ -1,6 +1,7 @@
 (function(){
 	var scControllers = angular.module('scControllers', [
-		'scServices'
+		'scServices',
+		'scFilters'
 		]);
 
 	scControllers.controller('PlayerController', [
@@ -37,7 +38,8 @@
 		'$scope', 
 		'SearchService',
 		'$timeout',
-		function($scope, SearchService, $timeout) {
+		'truncate',
+		function($scope, SearchService, $timeout, truncate) {
 		var vm = this;
 		vm.term = "";
 		vm.results = [];

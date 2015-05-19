@@ -3,11 +3,23 @@
 		'scControllers'
 		]);
 
-	scFilters.filter('playlistFilter', ['$scope', function($scope){
-		//do a filter thing
-		//how do I do this????
-		//I would need to find out if something is playing or not.
-		//Maybe I could just autoplay the first track on Now Playing.
-		//hmmm
-		//set current index (pass in $index with a function on click, stored in controller. controller has songplaying variable and use limitTo: 1)
+	scFilters.filter('truncate', ['$scope', function($scope){
+		return function (text, length, end){
+    		if (text !== undefined){
+      			if (isNaN(length)){
+       				length = 10;
+      			}
+
+	      		if (end === undefined){
+	        		end = "...";
+	     		}
+
+	      		if (text.length <= length || text.length - end.length <= length){
+	        	return text;
+	      		}else{
+	        	return String(text).substring(0, length - end.length) + end;
+	      		}
+    		}
+  		};
 	}]);
+})();
