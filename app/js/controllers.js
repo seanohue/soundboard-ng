@@ -19,7 +19,7 @@
 	  };
 
 	  vm.getSelection = function(){
-	  	return SearchService.selection;
+	  	return SearchService.selection+"/tracks";
 	  };
 
 	  vm.setSelection = function(selectionURL){
@@ -82,10 +82,6 @@
         		//return vm.results;
       		}, 200);
 		};
-
-		//vm.doSearch = function(searchFor){
-		//	vm.getSearchText(searchFor).then(function(//response){vm.results = SearchService.})
-		//}
 
 		vm.searched = false;
 		vm.toggleSearched = function(){

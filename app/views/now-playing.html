@@ -1,5 +1,5 @@
 <div ng-controller ="PlayerController as ham">
-  <div plangular="https://soundcloud.com/platform/tracks" id="track"> 
+  <div plangular="ham.getSelection()" id="track"> 
     <div ng-repeat="track in tracks | limitTo: 1" >
 <!-- | filter: {player.playing === track.src} -->
       <h3 id="trackinfo">
