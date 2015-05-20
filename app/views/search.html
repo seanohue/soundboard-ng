@@ -16,15 +16,16 @@
     	<input placeholder = "search" ng-model="search.term"/>
 	</div>
 
-	<div id = "searchpress"  ng-mousedown = "search.getResults(search.term, search.category); search.getSearchText(search.term, search.category); search.toggleSearched()">
+	<div id = "searchpress"  ng-mousedown = "search.getResults(search.term, search.category); search.toggleSearched()">
 	   <button id = "searchbutton">Search {{search.category()}}</button>
 	</div>
 
   <ul id = "searchresults">
-      <li id = "result" ng-repeat = "searchresult in search.results | limitTo: 4" ng-mousedown = "search.setSelection(searchresult.permalink_url)">
-        <button>
-        {{searchresult.username | truncate}}
-        </button>
-      </li>
+        <li id = "result" ng-repeat = "searchresult in search.results | limitTo: 4" ng-mousedown = "search.setSelection(searchresult.permalink_url);">
+          <a href="#/">
+            <button>
+            {{searchresult.username | truncate}}
+            </button>
+          </a>
   </ul>
 </div>
