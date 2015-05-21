@@ -13,14 +13,18 @@
 	  vm.greeting = 'SoundBoard';
 	  vm.trackCounter = 0; //use this to keep track rather than $index
 
-	  vm.nextTrack = function(){
-	  	vm.trackCounter++;
-	  	console.log('next');
+	  vm.nextTrack = function(limit){
+	  	if(vm.trackCounter !== limit){
+	  		vm.trackCounter++;
+	  		console.log('next - '+vm.trackCounter);
+	  	};
 	  };
 
 	  vm.previousTrack = function(){
-	  	vm.trackCounter--;
-	  	console.log('last');
+	  	if(vm.trackCounter!==0){
+	  		vm.trackCounter--;
+	  		console.log('last - '+vm.trackCounter);
+	  	};
 	  };
 
 	  vm.resetCounter = function(){

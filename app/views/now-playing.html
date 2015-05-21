@@ -13,7 +13,7 @@
         <img src="img/pause-icon.png" ng-hide="!ham.nowPlaying()">  
       </div>
       <div id="next">
-        <img src="img/next.png" ng-mousedown="next(); ham.togglePlay(true); ham.nextTrack()">
+        <img src="img/next.png" ng-mousedown="next(); ham.togglePlay(true); ham.nextTrack(tracks.length)">
       </div> 
       <small id="time">
         {{ currentTime | hhmmss }} | {{ duration | hhmmss }}
