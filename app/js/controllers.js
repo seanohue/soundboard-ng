@@ -9,7 +9,7 @@
 		function($scope, SearchService) {
 	  
 	  var vm = this;
-	  $scope.playingNow = false;
+	  vm.playingNow = false;
 	  vm.greeting = 'SoundBoard';
 	  vm.trackCounter = 0; //use this to keep track rather than $index
 
@@ -29,7 +29,7 @@
 	  }
 
 	  vm.togglePlay = function(status){
-	  	if (status != undefined){
+	  	if (status === undefined){
 		  	console.log(vm.playingNow);
 		  	console.log("toggling so hard right now");
 		  	vm.playingNow = !vm.playingNow;
@@ -38,7 +38,7 @@
 	  	else
 	  		{
 	  			vm.playingNow = status;
-	  			console.log('status is '+status+' and play is set to '+vm.togglePlay);
+	  			console.log('status is '+status+' and play is set to '+vm.playingNow);
 	  		};
 	  };
 
