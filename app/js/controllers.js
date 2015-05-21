@@ -11,7 +11,7 @@
 	  var vm = this;
 	  $scope.playingNow = false;
 	  vm.greeting = 'SoundBoard';
-
+	  vm.trackCounter = 0; //use this to keep track rather than $index
 
 	  vm.togglePlay = function(){
 	  	console.log(vm.playingNow);
