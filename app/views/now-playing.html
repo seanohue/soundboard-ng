@@ -23,10 +23,10 @@
       </progress>      
           
       <div id="trackimg">
-          <img ng-src="{{ track.artwork_url  }}" alt="{{ track.title }}" />
+          <img ng-src="{{ tracks[ham.trackCounter].artwork_url  }}" alt="{{ tracks[ham.trackCounter].title }}" />
       </div>
       <div id="view-link">
-          <a ng-href="{{ track.permalink_url }}">View on SoundCloud</a>
+          <a ng-href="{{ tracks[ham.trackCounter].permalink_url }}">View on SoundCloud</a>
       </div>
     
     </div>
