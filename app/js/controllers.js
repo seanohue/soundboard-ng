@@ -1,5 +1,5 @@
-(function() {
-    var scControllers = angular.module('scControllers', [
+(function () {
+    scControllers = angular.module('scControllers', [
         'scServices'
     ]);
 
@@ -10,7 +10,6 @@
 
             var vm = this;
             vm.playingNow = false;
-            vm.greeting = 'SoundBoard';
             vm.trackCounter = 0; //use this to keep track rather than $index
 
             vm.nextTrack = function() {
