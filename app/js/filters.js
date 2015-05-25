@@ -5,7 +5,7 @@
         return function(text, length, end) {
             if (text !== undefined) {
                 if (isNaN(length)) {
-                    length = 16;
+                    length = 12;
                 }
 
                 if (end === undefined) {
