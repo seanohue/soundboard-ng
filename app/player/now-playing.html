@@ -1,0 +1,32 @@
+<div ng-controller="PlayerController as ham">
+    <div plangular="{{ham.getSelection()}}" id="track">
+        <div ng-repeat="track in tracks | limitTo: 1">
+            <!-- | filter: {player.playing === track.src} -->
+            <h3 id="trackinfo">
+        {{tracks[ham.trackCounter].user.username | truncate}} - {{tracks[ham.trackCounter].title | truncate: 20}}
+      </h3>
+            <div ng-mousedown="previous(); ham.togglePlay(true); ham.previousTrack()" id="previous">
+                <img src="img/previous.png">
+            </div>
+            <div ng-mousedown="playPause(ham.trackCounter); ham.togglePlay()" id="play">
+                <img src="img/play-icon.png" alt="" ng-hide="ham.nowPlaying()">
+                <img src="img/pause-icon.png" ng-hide="!ham.nowPlaying()">
+            </div>
+            <div id="next">
+                <img src="img/next.png" ng-mousedown="next(); ham.togglePlay(true); ham.nextTrack()">
+            </div>
+            <small id="time">
+        {{ currentTime | hhmmss }} | {{ duration | hhmmss }}
+      </small>
+            <progress ng-value="currentTime / duration || 0">
+                {{ currentTime / duration || 0 }}
+            </progress>
+            <div id="trackimg">
+                <img ng-src="{{ tracks[ham.trackCounter].artwork_url  }}" alt="{{ tracks[ham.trackCounter].title }}" />
+            </div>
+            <div id="view-link">
+                <a ng-href="{{ tracks[ham.trackCounter].permalink_url }}">View on SoundCloud</a>
+            </div>
+        </div>
+    </div>
+</div>
