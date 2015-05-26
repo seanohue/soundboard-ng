@@ -9,6 +9,8 @@
 
             var vm = this;
             vm.term = "";
+            vm.currentPage = 0;
+            vm.pageSize = 4;
             var results = [];
             var searchFilter = "Artists";
             //vm.service = SearchService;
