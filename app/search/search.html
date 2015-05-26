@@ -18,11 +18,18 @@
         <button id="searchbutton">Search {{search.category()}}</button>
     </div>
     <ul id="searchresults">
-        <li id="result" ng-repeat="searchresult in search.getResults() | limitTo: 4" ng-mousedown="search.setSelection(searchresult.permalink_url);">
+        <li id="result" ng-repeat="searchresult in search.getResults() | startFrom:search.currentPage*search.pageSize | limitTo: search.pageSize" ng-mousedown="search.setSelection(searchresult.permalink_url);">
             <a href="#/">
                 <button>
                     {{searchresult.username | truncate}}
                 </button>
             </a>
+        </li>
     </ul>
+    <div class="scrolldisplay">
+            <div>
+                <a class="scrollbutton ScrollButtonRight" ng-hide="search.currentPage >= search.getResults().length/search.pageSize - 1" ng-mousedown="search.currentPage = search.currentPage + 1"><img src="img/arrow-next.png" alt=""></img></a>
+            </div>
+            <a class="scrollbutton ScrollButtonLeft" href="" ng-hide="search.currentPage == 0" ng-mousedown="search.currentPage = search.currentPage - 1"><img src="img/arrow-back.png" alt=""></img></a>
+        </div>
 </div>

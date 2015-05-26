@@ -238,6 +238,26 @@ a:hover {
     left: 428px;
 }
 
+.scrolldisplay {
+    position: absolute;
+    top: 240px;
+    left: 380px;
+}
+
+.scrollbutton {
+    font-size: 18px;
+    color: white;
+}
+
+.ScrollButtonLeft {
+
+}
+
+.ScrollButtonRight {
+    position: absolute;
+    left: 320px;
+}
+
 #result {
     padding: 5px;
     list-style: none;
