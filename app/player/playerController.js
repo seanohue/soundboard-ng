@@ -1,36 +1,36 @@
-(function () {
+(function() {
     playerControllers = angular.module('playerControllers', [
         'scServices'
     ]);
 
     playerControllers.controller('PlayerController', [
         'SearchService',
-        function (SearchService) {
+        function(SearchService) {
 
             var vm = this;
             var playingNow = false;
             var trackCounter = 0; //use this to keep track rather than $index
 
-            vm.getTrackCounter = function () {
+            vm.getTrackCounter = function() {
                 return trackCounter;
             };
 
-            vm.nextTrack = function () {
+            vm.nextTrack = function() {
                 trackCounter++;
                 console.log('next');
             };
 
-            vm.previousTrack = function () {
+            vm.previousTrack = function() {
                 trackCounter--;
                 console.log('last');
             };
 
-            vm.resetCounter = function () {
+            vm.resetCounter = function() {
                 trackCounter = 0;
                 console.log('reset');
             };
 
-            vm.togglePlay = function (status) {
+            vm.togglePlay = function(status) {
                 if (status === undefined) {
                     console.log(playingNow);
                     console.log("toggling so hard right now");
@@ -42,11 +42,11 @@
                 }
             };
 
-            vm.getSelection = function () {
+            vm.getSelection = function() {
                 return SearchService.getSelection() + "/tracks";
             };
 
-            vm.nowPlaying = function () {
+            vm.nowPlaying = function() {
                 return playingNow;
             };
 

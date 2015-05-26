@@ -18,7 +18,7 @@
         <button id="searchbutton">Search {{search.category()}}</button>
     </div>
     <ul id="searchresults">
-        <li id="result" ng-repeat="searchresult in search.getResults() | startFrom:search.currentPage*search.pageSize | limitTo: search.pageSize" ng-mousedown="search.setSelection(searchresult.permalink_url);">
+        <li id="result" ng-repeat="searchresult in search.getResults() | startFrom:search.startingPoint() | limitTo: search.pageSize" ng-mousedown="search.setSelection(searchresult.permalink_url);">
             <a href="#/">
                 <button>
                     {{searchresult.username | truncate}}
@@ -27,9 +27,11 @@
         </li>
     </ul>
     <div class="scrolldisplay">
-            <div>
-                <a class="scrollbutton ScrollButtonRight" ng-hide="search.isLastPage()" ng-mousedown="search.nextPage()"><img src="img/arrow-next.png" alt=""></img></a>
-            </div>
-            <a class="scrollbutton ScrollButtonLeft" href="" ng-hide="search.isFirstPage()" ng-mousedown="search.previousPage()"><img src="img/arrow-back.png" alt=""></img></a>
+        <div>
+            <a class="scrollbutton ScrollButtonRight" ng-hide="search.isLastPage()" ng-mousedown="search.nextPage()"><img src="img/arrow-next.png" alt=""></img>
+            </a>
         </div>
+        <a class="scrollbutton ScrollButtonLeft" href="" ng-hide="search.isFirstPage()" ng-mousedown="search.previousPage()"><img src="img/arrow-back.png" alt=""></img>
+        </a>
+    </div>
 </div>
