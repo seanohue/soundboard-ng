@@ -1,0 +1,28 @@
+<div id="searchpage" ng-controller="SearchController as search">
+    <h3 id="searchingby"><br />Search SoundCloud<br /></h3>
+    <div id="searchpills">
+        <div id='artists' ng-mousedown="search.change('Artists')">
+            <button>Artists</button>
+        </div>
+        <div id='tracks' ng-mousedown="search.change('Tracks')">
+            <button>Tracks</button>
+        </div>
+        <div id='playlists' ng-mousedown="search.change('Playlists')">
+            <button>Playlists</button>
+        </div>
+    </div>
+    <div id="searchbar">
+        <input placeholder="search" ng-model="search.term" />
+    </div>
+    <div id="searchpress" ng-mousedown="search.doSearch(search.term, search.category); search.toggleSearched()">
+        <button id="searchbutton">Search {{search.category()}}</button>
+    </div>
+    <ul id="searchresults">
+        <li id="result" ng-repeat="searchresult in search.getResults() | limitTo: 4" ng-mousedown="search.setSelection(searchresult.permalink_url);">
+            <a href="#/">
+                <button>
+                    {{searchresult.username | truncate}}
+                </button>
+            </a>
+    </ul>
+</div>
