@@ -15,6 +15,22 @@
             var searchFilter = "Artists";
             //vm.service = SearchService;
 
+            vm.nextPage = function (){
+                vm.currentPage++;
+            };
+
+            vm.previousPage = function (){
+                vm.currentPage--;
+            };
+
+            vm.isLastPage = function (){
+                return vm.currentPage >= vm.getResults().length/vm.pageSize - 1;
+            };
+
+            vm.isFirstPage = function (){
+                return vm.currentPage == 0;
+            };
+
             vm.getResults = function(){
                 return results;
             }

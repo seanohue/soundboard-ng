@@ -28,8 +28,8 @@
     </ul>
     <div class="scrolldisplay">
             <div>
-                <a class="scrollbutton ScrollButtonRight" ng-hide="search.currentPage >= search.getResults().length/search.pageSize - 1" ng-mousedown="search.currentPage = search.currentPage + 1"><img src="img/arrow-next.png" alt=""></img></a>
+                <a class="scrollbutton ScrollButtonRight" ng-hide="search.isLastPage()" ng-mousedown="search.nextPage()"><img src="img/arrow-next.png" alt=""></img></a>
             </div>
-            <a class="scrollbutton ScrollButtonLeft" href="" ng-hide="search.currentPage == 0" ng-mousedown="search.currentPage = search.currentPage - 1"><img src="img/arrow-back.png" alt=""></img></a>
+            <a class="scrollbutton ScrollButtonLeft" href="" ng-hide="search.isFirstPage()" ng-mousedown="search.previousPage()"><img src="img/arrow-back.png" alt=""></img></a>
         </div>
 </div>
