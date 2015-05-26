@@ -4,44 +4,41 @@
     ]);
 
     scControllers.controller('SearchController', [
-        '$scope',
         'SearchService',
-        '$timeout',
-        function($scope, SearchService, $timeout) {
+        function (SearchService) {
 
             var vm = this;
             vm.term = "";
             vm.results = [];
             vm.searchFilter = "Artists";
 
-            vm.change = function(newSearch) {
+            vm.change = function (newSearch) {
                 vm.searchFilter = newSearch;
             };
 
-            vm.category = function() {
+            vm.category = function () {
                 return vm.searchFilter;
             };
 
-            vm.getResults = function(searchFor) {
+            vm.getResults = function (searchFor) {
                 var searchFor = searchFor.toLowerCase();
                 console.log(vm.searchFilter);
-                var cat = vm.searchFilter.toLowerCase();
-                SearchService.getSearchText(searchFor, cat).then(function(data) {
+                var category = vm.searchFilter.toLowerCase();
+                SearchService.getSearchText(searchFor, category).then(function (data) {
                     vm.results = data;
                 });
                 return vm.results;
             };
 
-            vm.setSelection = function(selectionURL) {
-                console.log("pres butan " + selectionURL);
+            vm.setSelection = function (selectionURL) {
                 SearchService.setSelection(selectionURL);
             };
 
             vm.searched = false;
 
-            vm.toggleSearched = function() {
+            vm.toggleSearched = function () {
                 vm.searched = !vm.searched;
-            }
+            };
 
         }
     ]);
