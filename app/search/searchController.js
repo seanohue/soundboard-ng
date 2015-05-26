@@ -1,9 +1,9 @@
 (function () {
-    scControllers = angular.module('scControllers', [
+    searchControllers = angular.module('searchControllers', [
         'scServices'
     ]);
 
-    scControllers.controller('SearchController', [
+    searchControllers.controller('SearchController', [
         'SearchService',
         function (SearchService) {
 
@@ -13,6 +13,10 @@
             var searchFilter = "Artists";
             //vm.service = SearchService;
 
+            vm.getResults = function(){
+                return results;
+            }
+
             vm.change = function (newSearch) {
                 searchFilter = newSearch;
             };
@@ -21,7 +25,7 @@
                 return searchFilter;
             };
 
-            vm.getResults = function (searchFor) {
+            vm.doSearch = function (searchFor) {
                 console.log(searchFilter);
                 var category = searchFilter.toLowerCase();
                 SearchService.getSearchText(searchFor, category).then(function (data) {

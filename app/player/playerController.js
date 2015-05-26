@@ -1,9 +1,9 @@
 (function () {
-    scControllers = angular.module('scControllers', [
+    playerControllers = angular.module('playerControllers', [
         'scServices'
     ]);
 
-    scControllers.controller('PlayerController', [
+    playerControllers.controller('PlayerController', [
         'SearchService',
         function (SearchService) {
 

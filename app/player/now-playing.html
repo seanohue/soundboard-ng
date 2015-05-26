@@ -8,7 +8,7 @@
             <div ng-mousedown="previous(); ham.togglePlay(true); ham.previousTrack()" id="previous">
                 <img src="img/previous.png">
             </div>
-            <div ng-mousedown="playPause(ham.trackCounter); ham.togglePlay()" id="play">
+            <div ng-mousedown="playPause(ham.getTrackCounter()); ham.togglePlay()" id="play">
                 <img src="img/play-icon.png" alt="" ng-hide="ham.nowPlaying()">
                 <img src="img/pause-icon.png" ng-hide="!ham.nowPlaying()">
             </div>
@@ -22,10 +22,10 @@
                 {{ currentTime / duration || 0 }}
             </progress>
             <div id="trackimg">
-                <img ng-src="{{ tracks[ham.trackCounter].artwork_url  }}" alt="{{ tracks[ham.trackCounter].title }}" />
+                <img ng-src="{{ tracks[ham.getTrackCounter()].artwork_url  }}" alt="{{ tracks[ham.getTrackCounter()].title }}" />
             </div>
             <div id="view-link">
-                <a ng-href="{{ tracks[ham.trackCounter].permalink_url }}">View on SoundCloud</a>
+                <a ng-href="{{ tracks[ham.getTrackCounter()].permalink_url }}">View on SoundCloud</a>
             </div>
         </div>
     </div>

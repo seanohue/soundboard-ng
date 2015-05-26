@@ -2,7 +2,8 @@
 
     var app = angular.module('app', [
             'plangular',
-            'scControllers',
+            'searchControllers',
+            'playerControllers',
             'ngRoute',
             'scFilters'
         ])
