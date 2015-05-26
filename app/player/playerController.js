@@ -1,50 +1,53 @@
-(function() {
+(function () {
     scControllers = angular.module('scControllers', [
         'scServices'
     ]);
 
     scControllers.controller('PlayerController', [
-        '$scope',
         'SearchService',
-        function($scope, SearchService) {
+        function (SearchService) {
 
             var vm = this;
-            vm.playingNow = false;
-            vm.trackCounter = 0; //use this to keep track rather than $index
+            var playingNow = false;
+            var trackCounter = 0; //use this to keep track rather than $index
 
-            vm.nextTrack = function() {
-                vm.trackCounter++;
+            vm.getTrackCounter = function () {
+                return trackCounter;
+            };
+
+            vm.nextTrack = function () {
+                trackCounter++;
                 console.log('next');
             };
 
-            vm.previousTrack = function() {
-                vm.trackCounter--;
+            vm.previousTrack = function () {
+                trackCounter--;
                 console.log('last');
             };
 
-            vm.resetCounter = function() {
-                vm.trackCounter = 0;
+            vm.resetCounter = function () {
+                trackCounter = 0;
                 console.log('reset');
-            }
-
-            vm.togglePlay = function(status) {
-                if (status === undefined) {
-                    console.log(vm.playingNow);
-                    console.log("toggling so hard right now");
-                    vm.playingNow = !vm.playingNow;
-                    console.log(vm.playingNow);
-                } else {
-                    vm.playingNow = status;
-                    console.log('status is ' + status + ' and play is set to ' + vm.playingNow);
-                };
             };
 
-            vm.getSelection = function() {
+            vm.togglePlay = function (status) {
+                if (status === undefined) {
+                    console.log(playingNow);
+                    console.log("toggling so hard right now");
+                    playingNow = !playingNow;
+                    console.log(playingNow);
+                } else {
+                    playingNow = status;
+                    console.log('status is ' + status + ' and play is set to ' + playingNow);
+                }
+            };
+
+            vm.getSelection = function () {
                 return SearchService.getSelection() + "/tracks";
             };
 
-            vm.nowPlaying = function() {
-                return vm.playingNow;
+            vm.nowPlaying = function () {
+                return playingNow;
             };
 
         }

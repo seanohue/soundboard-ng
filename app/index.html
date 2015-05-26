@@ -13,20 +13,20 @@
 </head>
 
 <body ng-app="app" id="main" class="innershadow">
-    <header class="innershadow" id="branding" ng-controller="DisplayController as display">
+    <header class="innershadow" id="branding">
         <nav>
             <div>
-                <div class="now" ng-mousedown="display.setNav('now')">
+                <div class="now">
                     <a href="#/">
             Now Playing 
           </a>
                 </div>
-                <div class="search" ng-mousedown="display.setNav('search')">
+                <div class="search">
                     <a href="#/search">
             Search  
           </a>
                 </div>
-                <div class="login" ng-mousedown="display.setNav('login')">
+                <div class="login">
                     <a href="#/login">
           Log In 
           </a>
@@ -46,9 +46,7 @@
     <script src="player/playerController.js"></script>
     <script src="search/searchController.js"></script>
     <script src="search/searchService.js"></script>
-    <script src="js/services.js"></script>
     <script src="js/filters.js"></script>
-    <script src="js/controllers.js"></script>
 </body>
 
 </html>

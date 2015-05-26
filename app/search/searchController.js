@@ -11,6 +11,7 @@
             vm.term = "";
             vm.results = [];
             vm.searchFilter = "Artists";
+            //vm.service = SearchService;
 
             vm.change = function (newSearch) {
                 vm.searchFilter = newSearch;
@@ -21,7 +22,6 @@
             };
 
             vm.getResults = function (searchFor) {
-                var searchFor = searchFor.toLowerCase();
                 console.log(vm.searchFilter);
                 var category = vm.searchFilter.toLowerCase();
                 SearchService.getSearchText(searchFor, category).then(function (data) {
