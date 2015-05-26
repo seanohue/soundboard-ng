@@ -9,25 +9,26 @@
 
             var vm = this;
             vm.term = "";
-            vm.results = [];
-            vm.searchFilter = "Artists";
+            
+            var results = [];
+            var searchFilter = "Artists";
             //vm.service = SearchService;
 
             vm.change = function (newSearch) {
-                vm.searchFilter = newSearch;
+                searchFilter = newSearch;
             };
 
             vm.category = function () {
-                return vm.searchFilter;
+                return searchFilter;
             };
 
             vm.getResults = function (searchFor) {
-                console.log(vm.searchFilter);
-                var category = vm.searchFilter.toLowerCase();
+                console.log(searchFilter);
+                var category = searchFilter.toLowerCase();
                 SearchService.getSearchText(searchFor, category).then(function (data) {
-                    vm.results = data;
+                    results = data;
                 });
-                return vm.results;
+                return results;
             };
 
             vm.setSelection = function (selectionURL) {
