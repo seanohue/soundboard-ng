@@ -4,6 +4,7 @@
             'plangular',
             'searchControllers',
             'playerControllers',
+            'loginControllers',
             'ngRoute',
             'scFilters'
         ])
