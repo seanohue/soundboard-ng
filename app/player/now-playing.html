@@ -22,7 +22,7 @@
                 {{ currentTime / duration || 0 }}
             </progress>
             <div id="trackimg">
-                <img ng-src="{{ tracks[ham.getTrackCounter()].artwork_url  }}" alt="No Image Available" />
+                <img ng-src="{{ tracks[ham.getTrackCounter()].artwork_url | picture}} " alt="Image" />
             </div>
             <div id="view-link">
                 <a ng-href="{{ tracks[ham.getTrackCounter()].permalink_url }}">View on SoundCloud</a>

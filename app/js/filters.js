@@ -21,6 +21,15 @@
         };
     });
 
+    scFilters.filter('picture', function() {
+        return function(input) {
+            if (input == null) {
+                input = "img/default.png";
+            }
+            return input;
+        }
+    });
+
 
     scFilters.filter('startFrom', function() {
         return function(input, start) {
