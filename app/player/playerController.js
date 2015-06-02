@@ -8,8 +8,8 @@
         function(SearchService) {
 
             var vm = this;
-            var playingNow = false;
-            var trackCounter = 0; //use this to keep track rather than $index
+            var isPlayingNow = false;
+            var trackCounter = 0; //used instead of $index
 
             vm.getTrackCounter = function() {
                 return trackCounter;
@@ -17,28 +17,17 @@
 
             vm.nextTrack = function() {
                 trackCounter++;
-                console.log('next');
             };
 
             vm.previousTrack = function() {
                 trackCounter--;
-                console.log('last');
             };
 
-            vm.resetCounter = function() {
-                trackCounter = 0;
-                console.log('reset');
-            };
-
-            vm.togglePlay = function(status) {
-                if (status === undefined) {
-                    console.log(playingNow);
-                    console.log("toggling so hard right now");
-                    playingNow = !playingNow;
-                    console.log(playingNow);
+            vm.togglePlay = function(playStatus) {
+                if (playStatus === undefined) {
+                    isPlayingNow = !isPlayingNow;
                 } else {
-                    playingNow = status;
-                    console.log('status is ' + status + ' and play is set to ' + playingNow);
+                    isPlayingNow = playStatus;
                 }
             };
 
@@ -47,7 +36,7 @@
             };
 
             vm.nowPlaying = function() {
-                return playingNow;
+                return isPlayingNow;
             };
 
         }
