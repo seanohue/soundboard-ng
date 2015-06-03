@@ -1,19 +1,19 @@
-<div ng-controller="PlayerController as ham">
-    <div plangular="{{ham.getSelection()}}" id="track">
+<div ng-controller="PlayerController as vm">
+    <div plangular="{{vm.getSelection()}}" id="track">
         <div ng-repeat="track in tracks | limitTo: 1">
             <!-- | filter: {player.playing === track.src} -->
             <h3 id="trackinfo">
-        {{tracks[ham.getTrackCounter()].user.username | truncate}} - {{tracks[ham.getTrackCounter()].title | truncate: 20}}
+        {{tracks[vm.getTrackCounter()].user.username | truncate}} - {{tracks[vm.getTrackCounter()].title | truncate: 20}}
       </h3>
-            <div ng-mousedown="previous(); ham.togglePlay(true); ham.previousTrack()" id="previous">
+            <div ng-mousedown="previous(); vm.togglePlay(true); vm.previousTrack()" id="previous">
                 <img src="img/previous.png">
             </div>
-            <div ng-mousedown="playPause(ham.getTrackCounter()); ham.togglePlay()" id="play">
-                <img src="img/play-icon.png" alt="" ng-hide="ham.nowPlaying()">
-                <img src="img/pause-icon.png" ng-hide="!ham.nowPlaying()">
+            <div ng-mousedown="playPause(vm.getTrackCounter()); vm.togglePlay()" id="play">
+                <img src="img/play-icon.png" alt="" ng-hide="vm.nowPlaying()">
+                <img src="img/pause-icon.png" ng-hide="!vm.nowPlaying()">
             </div>
             <div id="next">
-                <img src="img/next.png" ng-mousedown="next(); ham.togglePlay(true); ham.nextTrack()">
+                <img src="img/next.png" ng-mousedown="next(); vm.togglePlay(true); vm.nextTrack()">
             </div>
             <small id="time">
         {{ currentTime | hhmmss }} | {{ duration | hhmmss }}
@@ -22,7 +22,7 @@
                 {{ currentTime / duration || 0 }}
             </progress>
             <div id="trackimg">
-                <img ng-src="{{ tracks[ham.getTrackCounter()].artwork_url | picture}} " alt="Image" />
+                <img ng-src="{{ tracks[vm.getTrackCounter()].artwork_url | picture}} " alt="Image" />
             </div>
         </div>
     </div>

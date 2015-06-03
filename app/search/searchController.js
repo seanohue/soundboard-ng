@@ -28,7 +28,7 @@
             }
 
             vm.isLastPage = function() {
-                return currentPage >= vm.getResults().length / vm.pageSize - 1;
+                return currentPage >= vm.getResults().length / vm.pageSize - 1; //because currentPage starts at 0
             };
 
             vm.isFirstPage = function() {
@@ -50,7 +50,7 @@
             vm.doSearch = function(searchFor) {
                 console.log(searchFilter);
                 var category = searchFilter.toLowerCase();
-                SearchService.getSearchText(searchFor, category).then(function(data) {
+                SearchService.getSearch(searchFor, category).then(function(data) {
                     results = data;
                 });
                 return results;

@@ -10,10 +10,11 @@
             var selection = "http://soundcloud.com/platform";
 
             return {
-                getSearchText: function(searchFor, category) {
+                getSearch: function(searchFor, category) {
                     searchFor = searchFor.toLowerCase();
                     console.log("Getting query results...");
                     var deferred = $q.defer();
+                    //'artists' is used to make the UI more user-friendly, but this could still be refactored
                     if (category === 'artists') {
                         category = 'users';
                     };
@@ -21,10 +22,7 @@
                     var promise = $http.get('http://api.soundcloud.com/' + category + '?client_id=0b1b5623bddcf8d73545c97a7d12957c&q=' + searchFor);
 
                     promise.success(function(data) {
-                        console.log(data);
                         deferred.resolve(data);
-
-
                     }).error(function(msg, code) {
                         deferred.reject(msg);
                         $log.error(msg, code);
@@ -34,7 +32,6 @@
 
                 setSelection: function(selectionURL) {
                     selection = selectionURL;
-                    console.log("set selection to " + selection);
                 },
 
                 getSelection: function() {
